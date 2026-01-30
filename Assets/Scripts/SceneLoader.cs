@@ -63,19 +63,19 @@ public class SceneLoader : MonoBehaviour
     {
         overlayCanvasGroup.blocksRaycasts = true;
         
-        float startTime = Time.time;
-        while (Time.time < startTime + fadeDuration)
+        float startTime = Time.unscaledTime;
+        while (Time.unscaledTime < startTime + fadeDuration)
         {
-            overlayCanvasGroup.alpha = Mathf.Lerp(0f, 1f, (Time.time - startTime) / fadeDuration);
+            overlayCanvasGroup.alpha = Mathf.Lerp(0f, 1f, (Time.unscaledTime - startTime) / fadeDuration);
             yield return null;
         }
         
         SceneManager.LoadScene(sceneName);
         
-        startTime = Time.time;
-        while (Time.time < startTime + fadeDuration)
+        startTime = Time.unscaledTime;
+        while (Time.unscaledTime < startTime + fadeDuration)
         {
-            overlayCanvasGroup.alpha = Mathf.Lerp(1f, 0f, (Time.time - startTime) / fadeDuration);
+            overlayCanvasGroup.alpha = Mathf.Lerp(1f, 0f, (Time.unscaledTime - startTime) / fadeDuration);
             yield return null;
         }
         

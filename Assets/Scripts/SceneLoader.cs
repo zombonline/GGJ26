@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -5,8 +6,15 @@ public class SceneLoader : MonoBehaviour
 {
     public static SceneLoader Instance;
     
+    [Header("UI Components")]
+    [SerializeField] private CanvasGroup overlayCanvasGroup;
+
+    [Header("Settings")]
     [SerializeField] private string menuSceneName;
     [SerializeField] private string levelSceneName;
+    [SerializeField] private float fadeDuration;     
+    
+    private Coroutine _changeSceneCoroutine;
     
     private void Awake()
     {
@@ -32,11 +40,46 @@ public class SceneLoader : MonoBehaviour
 
     public void ChangeToMenuScene()
     {
-        SceneManager.LoadScene(menuSceneName);
+        ChangeToScene(menuSceneName);
     }
     
     public void ChangeToLevelScene()
     {
-        SceneManager.LoadScene(levelSceneName);
+        ChangeToScene(levelSceneName);
+    }
+
+    private void ChangeToScene(string sceneName)
+    {
+        if (_changeSceneCoroutine != null)
+        {
+            StopCoroutine(_changeSceneCoroutine);
+            _changeSceneCoroutine = null;
+        }
+
+        StartCoroutine(ChangeSceneSequence(sceneName));
+    }
+    
+    private IEnumerator ChangeSceneSequence(string sceneName)
+    {
+        overlayCanvasGroup.blocksRaycasts = true;
+        
+        float startTime = Time.time;
+        while (Time.time < startTime + fadeDuration)
+        {
+            overlayCanvasGroup.alpha = Mathf.Lerp(0f, 1f, (Time.time - startTime) / fadeDuration);
+            yield return null;
+        }
+        
+        SceneManager.LoadScene(sceneName);
+        
+        startTime = Time.time;
+        while (Time.time < startTime + fadeDuration)
+        {
+            overlayCanvasGroup.alpha = Mathf.Lerp(1f, 0f, (Time.time - startTime) / fadeDuration);
+            yield return null;
+        }
+        
+        overlayCanvasGroup.blocksRaycasts = false;
+        _changeSceneCoroutine = null;
     }
 }

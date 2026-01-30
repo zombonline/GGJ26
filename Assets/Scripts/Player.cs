@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -26,11 +27,42 @@ public class Player : MonoBehaviour
     private bool[] _inputValue =  new bool[2];
     private float _lastInputTime =  float.NegativeInfinity;
     private int _repeatingInputCount = 0;
+
+    public int Combo
+    {
+        get => _combo;
+        set
+        {
+            if (_combo == value)
+                return;
+            _combo = value;
+            ComboChanged?.Invoke();
+        }
+    }
+    private int _combo = 0;
+    public event Action ComboChanged; 
+    
+    // ======== Unity Messages ========
     
     private void Update()
     {
         ParseInput();
+        
+        // debug
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            Combo++;
+            ComboChanged?.Invoke();   
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            Combo = 0;
+            ComboChanged?.Invoke();   
+        }
     }
+    
+    // ======== Input Messages ========
     
     private void OnInput1(InputValue value)
     {
@@ -41,6 +73,7 @@ public class Player : MonoBehaviour
     {
         CollectInput(1, value.isPressed);
     }
+    
     private void OnPause()
     {
         if (Time.timeScale == 0)
@@ -48,6 +81,8 @@ public class Player : MonoBehaviour
         
         gameManager.PauseGame();
     }
+    
+    // ======== Input Parsing ========
     
     private void CollectInput(int inputIndex, bool isPressed)
     {
@@ -89,6 +124,9 @@ public class Player : MonoBehaviour
 
     private void ParseInput()
     {
+        if (Time.timeScale == 0)
+            return;
+        
         attackDebugText.text = _currentInputType.ToString();
     }
 }

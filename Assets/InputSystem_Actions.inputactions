@@ -93,7 +93,7 @@
                     "id": "8ad0b11f-8809-40f8-8470-cfb6476d9d93",
                     "expectedControlType": "",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press(behavior=2)",
                     "initialStateCheck": false
                 },
                 {
@@ -102,13 +102,22 @@
                     "id": "6b746225-7240-4d78-af7d-da68687e9889",
                     "expectedControlType": "",
                     "processors": "",
-                    "interactions": "",
+                    "interactions": "Press(behavior=2)",
                     "initialStateCheck": false
                 },
                 {
                     "name": "Pause",
                     "type": "Button",
                     "id": "4639d552-5910-4372-9b0a-ef4de2b340e4",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "HeavyInput",
+                    "type": "Button",
+                    "id": "490b2fb0-077c-44af-bc2e-d7327b7900e3",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -531,6 +540,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "026ddde0-7dfc-40bb-a5a1-33d5bca9f0b5",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HeavyInput",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

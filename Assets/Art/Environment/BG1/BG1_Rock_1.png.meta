@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1a5172b4a8c1cbd47b6601dcb1da5211
+guid: f591fbc3821421e40840c2226c75d09d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6388375545323409683
-    second: BG Placeholder_0
+      213: -6544948861201837825
+    second: BG1_Rock_1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BG Placeholder_0
+      name: BG1_Rock_1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 3840
-        height: 2160
+        width: 749
+        height: 579
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: deea431e94ee757a0800000000000000
-      internalID: -6388375545323409683
+      spriteID: ff097f6ffabab25a0800000000000000
+      internalID: -6544948861201837825
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      BG Placeholder_0: -6388375545323409683
+      BG1_Rock_1_0: -6544948861201837825
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

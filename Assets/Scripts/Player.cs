@@ -1,5 +1,4 @@
 using System;
-using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -7,7 +6,7 @@ public class Player : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private GameManager gameManager;
-    [SerializeField] private TextMeshProUGUI attackDebugText;
+    [SerializeField] private Mask mask;
     
     [Header("Settings")]
     [SerializeField] private float doubleInputInterval;
@@ -43,6 +42,16 @@ public class Player : MonoBehaviour
         {
             Combo = 0;
             ComboChanged?.Invoke();   
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            mask.AddEnergy(50f);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            mask.CollectMask(Mask.MaskType.Special);
         }
     }
     

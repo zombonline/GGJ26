@@ -3,10 +3,13 @@ using UnityEngine;
 [ExecuteAlways]
 public class ChartSpawner : MonoBehaviour
 {
-    public SongChart chart;
     public float unitsPerSecond = 5f;
     public float timeOffset = 0f;
+    [SerializeField] SongPlayer songPlayer;
     [ContextMenu("Rebuild Markers")]
+    
+    
+    
     public void RebuildButton()
     {
         Rebuild();
@@ -17,8 +20,8 @@ public class ChartSpawner : MonoBehaviour
         ClearExistingMarkers();
 
         // spawn markers from chart
-        
-        
+
+        var chart = songPlayer.chart;
         foreach (var marker in chart.markers)
         {
             SpawnAtTime(marker.obstacle ,marker.time + timeOffset, $"Marker_{marker.time:F2}s");

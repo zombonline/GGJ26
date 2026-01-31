@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7400931066440358848}
   - component: {fileID: -4159572338911937614}
   m_Layer: 6
-  m_Name: Obstacle
+  m_Name: Obstacle 2
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bb7e468f2e578e4b928aebe6902ca05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  type: 0
+  type: 2
   onObstacleHit:
     m_PersistentCalls:
       m_Calls:
@@ -139,7 +139,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.5, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8418359825832070928}
@@ -192,7 +192,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 8852544315037595736, guid: 2ff8e99272c447648ada985fbb2cd469, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.7924528, g: 0.4448202, b: 0.4448202, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

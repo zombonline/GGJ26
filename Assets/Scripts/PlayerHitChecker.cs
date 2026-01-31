@@ -1,19 +1,31 @@
+using System;
 using UnityEngine;
+using UnityEngine.Events;
 
+public enum BeatHitType
+{
+    Attack,
+    Jump,
+    HeavyAttack
+}
 public class PlayerHitChecker : MonoBehaviour
 {
     public float hitDistance = 0.5f; // tweak this for leniency
     public LayerMask obstacleLayer;  // put obstacles on this layer
 
-    void Update()
+    [SerializeField] public UnityEvent onAttackSuccess, onJumpSuccess, onHeavyAttackSuccess;
+
+    private void OnEnable()
     {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            CheckHit();
-        }
+        GetComponent<Player>().onActionPerformed += CheckHit;
     }
 
-    void CheckHit()
+    private void OnDisable()
+    {
+        GetComponent<Player>().onActionPerformed -= CheckHit;
+    }
+
+    public void CheckHit(BeatHitType type)
     {
         // find all obstacles in a small radius around the player
         Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, hitDistance, obstacleLayer);
@@ -33,16 +45,30 @@ public class PlayerHitChecker : MonoBehaviour
                     closestDist = d;
                 }
             }
-
-            Debug.Log("Success!");
-
-            // disable or consume the obstacle
-            closest.GetComponent<Obstacle>().ReactToPlayerInteraction(BeatHitType.Success);
+            if(type != closest.GetComponent<Obstacle>().type)
+                closest.GetComponent<Obstacle>().ReactToPlayerInteraction(ObstacleSuccessState.Fail);
+            else
+            {
+                closest.GetComponent<Obstacle>().ReactToPlayerInteraction(ObstacleSuccessState.Success);
+                switch (type)
+                {
+                    case BeatHitType.Attack:
+                        onAttackSuccess?.Invoke();
+                        break;
+                    case BeatHitType.HeavyAttack:
+                        onHeavyAttackSuccess?.Invoke();
+                        break;
+                    case BeatHitType.Jump:
+                        onJumpSuccess?.Invoke();
+                        break;
+                    default:
+                        throw new ArgumentOutOfRangeException(nameof(type), type, null);
+                }
+            }
         }
         else
         {
             Debug.Log("Miss");
-
         }
     }
 

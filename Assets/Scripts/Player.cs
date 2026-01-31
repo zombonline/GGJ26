@@ -1,6 +1,7 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
@@ -10,6 +11,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Mask mask;
     [SerializeField] private TextMeshProUGUI debugInputText;
 
+   public event Action<BeatHitType> onActionPerformed;
     
     [Header("Settings")]
     [SerializeField] private float heavyAttackInputInterval;
@@ -118,18 +120,21 @@ public class Player : MonoBehaviour
     {
         debugInputText.text = "Light Attack";
         debugInputText.color = Color.white;
+        onActionPerformed?.Invoke(BeatHitType.Attack);
     }
 
     private void PerformHeavyAttack()
     {
         debugInputText.text = "Heavy Attack";
         debugInputText.color = Color.white;
+        onActionPerformed?.Invoke(BeatHitType.HeavyAttack);
     }
 
     private void PerformJump()
     {
         debugInputText.text = "Jump";
         debugInputText.color = Color.white;
+        onActionPerformed?.Invoke(BeatHitType.Jump);
     }
 
     private void FadeDebugText()

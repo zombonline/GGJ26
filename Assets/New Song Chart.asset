@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be1250d5174107446959fa12d21b2157, type: 3}
+  m_Name: New Song Chart
+  m_EditorClassIdentifier: Assembly-CSharp::SongChart
+  audioClip: {fileID: 8300000, guid: 769d884232d0d7d4fada5b15931abdfb, type: 3}
+  markers:
+  - time: 1
+    obstacle: {fileID: 4105241903175021605, guid: 3d8d462d4f5379a4bba0a9e1719c060c, type: 3}
+  - time: 2
+    obstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
+  - time: 3
+    obstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
+  - time: 4
+    obstacle: {fileID: 4105241903175021605, guid: 0537401ae4445f34d812f687dc3c41d7, type: 3}
+  - time: 5
+    obstacle: {fileID: 4105241903175021605, guid: 0537401ae4445f34d812f687dc3c41d7, type: 3}
+  - time: 6
+    obstacle: {fileID: 4105241903175021605, guid: 0537401ae4445f34d812f687dc3c41d7, type: 3}
+  - time: 7
+    obstacle: {fileID: 4105241903175021605, guid: 3d8d462d4f5379a4bba0a9e1719c060c, type: 3}

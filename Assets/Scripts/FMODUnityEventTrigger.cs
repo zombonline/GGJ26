@@ -1,4 +1,5 @@
 using System;
+using System.Net.Sockets;
 using FMOD;
 using UnityEngine;
 using UnityEngine.Events;
@@ -16,23 +17,40 @@ public class FMODUnityEventTrigger : MonoBehaviour
     public UnityEvent onBeat;
 
     private EventInstance instance;
-
+    
     // Set from FMOD audio thread, read on Unity main thread
     private volatile bool beatTriggered = false;
     private volatile bool shuttingDown = false;
+    private volatile string lastMarkerName = "";
 
     void Start()
     {
-        instance = RuntimeManager.CreateInstance(fmodEvent);
-
-        // register callback
-        instance.setCallback(BeatCallback, EVENT_CALLBACK_TYPE.TIMELINE_MARKER);
-
-        instance.start();
+        FMODUnity.RuntimeManager.LoadBank("Main", true); // load synchronously
     }
 
     void Update()
     {
+        
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (instance.isValid())
+            {
+                instance.setCallback(null, EVENT_CALLBACK_TYPE.TIMELINE_MARKER);
+
+                // stop and release the instance
+                instance.stop(STOP_MODE.IMMEDIATE);
+                instance.release();
+            }
+            else
+            {
+                instance = RuntimeManager.CreateInstance(fmodEvent);
+
+                // register callback
+                instance.setCallback(BeatCallback);
+                instance.start();
+            }
+        }
+        
         if (beatTriggered)
         {
             beatTriggered = false;
@@ -44,13 +62,26 @@ public class FMODUnityEventTrigger : MonoBehaviour
     // Runs on FMOD's audio thread – NO Unity API calls here
     private RESULT BeatCallback(EVENT_CALLBACK_TYPE type, IntPtr eventPtr, IntPtr parameters)
     {
-        // ignore callbacks during/after shutdown
         if (shuttingDown)
             return RESULT.OK;
 
-        if (type == EVENT_CALLBACK_TYPE.TIMELINE_MARKER)
+        switch (type)
         {
-            beatTriggered = true;
+            case EVENT_CALLBACK_TYPE.TIMELINE_MARKER:
+                beatTriggered = true;
+
+                var info = (TIMELINE_MARKER_PROPERTIES)System.Runtime.InteropServices.Marshal.PtrToStructure(
+                    parameters, typeof(TIMELINE_MARKER_PROPERTIES));
+                lastMarkerName = info.name;
+                break;
+
+            case EVENT_CALLBACK_TYPE.STOPPED:
+                if (instance.isValid())
+                {
+                    instance.release();
+                    instance = default;
+                }
+                break;
         }
 
         return RESULT.OK;

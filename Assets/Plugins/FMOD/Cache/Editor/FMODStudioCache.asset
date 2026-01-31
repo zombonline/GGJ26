@@ -55,10 +55,10 @@ MonoBehaviour:
   Path: Assets/Bradley's FMOD Project/test/Build/Desktop/Main.bank
   Name: Main
   StudioPath: bank:/Main
-  lastModified: 639054001067285416
+  lastModified: 639054234109748495
   FileSizes:
   - Name: Desktop
-    Value: 5536
+    Value: 3040
   Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
@@ -83,7 +83,7 @@ MonoBehaviour:
   - {fileID: -5643079933072759499}
   StringsBanks:
   - {fileID: -1497357456888363554}
-  cacheTime: 639054001067285416
+  cacheTime: 639054234109748495
   cacheVersion: 131635
 --- !u!114 &129677728398042401
 MonoBehaviour:
@@ -107,8 +107,8 @@ MonoBehaviour:
   - {fileID: -187210068317274956}
   IsStream: 0
   Is3D: 0
-  IsOneShot: 0
+  IsOneShot: 1
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 3487
+  Length: 4582

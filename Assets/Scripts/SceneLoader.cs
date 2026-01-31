@@ -70,6 +70,7 @@ public class SceneLoader : MonoBehaviour
             yield return null;
         }
         
+        Time.timeScale = 1;
         SceneManager.LoadScene(sceneName);
         
         startTime = Time.unscaledTime;

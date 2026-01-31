@@ -5,6 +5,12 @@ public class GameManager : MonoBehaviour
 {
     public UnityEvent OnPause;
     public UnityEvent OnResume;
+    public UnityEvent OnGameFailed;
+
+    private void Update()
+    {
+        Debug.Log(Time.timeScale);
+    }
     
     public void PauseGame()
     {
@@ -20,7 +26,17 @@ public class GameManager : MonoBehaviour
 
     public void ResumeAndChangeToMenu()
     {
-        Time.timeScale = 1;
         SceneLoader.Instance.ChangeToMenuScene();
+    }
+
+    public void FailGame()
+    {
+        Time.timeScale = 0;
+        OnGameFailed.Invoke();
+    }
+
+    public void ResumeAndRestart()
+    {
+        SceneLoader.Instance.ChangeToLevelScene();
     }
 }

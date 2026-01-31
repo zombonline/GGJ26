@@ -1,40 +1,38 @@
-using System;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UIPauseMenu : MonoBehaviour
+public class UIFailureScreen : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private GameManager gameManager;
     
     [Header("Components")]
     [SerializeField] private CanvasGroup canvasGroup;
-    [SerializeField] private Button resumeButton;
-
-
+    [SerializeField] private Button retryButton;
+    
     private void Awake()
     {
         Show(false);
     }
-
-    public void Resume()
+    
+    public void Retry()
     {
-        gameManager.ResumeGame();
+        gameManager.ResumeAndRestart();
     }
-
+    
     public void BackToTitle()
     {
         gameManager.ResumeAndChangeToMenu();
     }
-
+    
     public void Show(bool show)
     {
         gameObject.SetActive(show);
         canvasGroup.alpha = show ? 1 : 0;
-
+        
         if (show)
         {
-            resumeButton.Select();
+            retryButton.Select();
         }
     }
 }

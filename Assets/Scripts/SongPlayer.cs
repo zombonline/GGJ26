@@ -32,4 +32,9 @@ public class SongPlayer : MonoBehaviour
     {
         source.Play();
     }
+
+    public void Pause()
+    {
+        source.Pause();
+    }
 }

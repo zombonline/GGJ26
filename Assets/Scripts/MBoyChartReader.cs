@@ -6,7 +6,7 @@ public class MboyChartReader : MonoBehaviour
     public TextAsset mboyJson;
     public SongChart chart;
 
-    [SerializeField] private GameObject jumpObstacle, attackObstacle;
+    [SerializeField] private GameObject jumpObstacle, attackObstacle, heavyAttackObstacle;
 
     [ContextMenu("Print Note Times")]
     public void PrintNoteTimes()
@@ -49,6 +49,9 @@ public class MboyChartReader : MonoBehaviour
                             break;
                         case "Attack":
                             obstacle = attackObstacle;
+                            break;
+                        case "Heavy Attack":
+                            obstacle = heavyAttackObstacle;
                             break;
                     }
                     if(obstacle == null) continue; // skip if no obstacle (e.g. Jump track)

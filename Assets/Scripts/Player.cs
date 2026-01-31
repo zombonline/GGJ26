@@ -148,13 +148,13 @@ public class Player : MonoBehaviour
     
     // ======== Combo ========
 
-    private void IncreaseCombo()
+    public void IncreaseCombo()
     {
         Combo++;
         MaxCombo = Mathf.Max(Combo, MaxCombo);
     }
 
-    private void ResetCombo()
+    public void ResetCombo()
     {
         Combo = 0;
     }

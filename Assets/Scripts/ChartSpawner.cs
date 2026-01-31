@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 [ExecuteAlways]
@@ -24,15 +25,16 @@ public class ChartSpawner : MonoBehaviour
         var chart = songPlayer.chart;
         foreach (var marker in chart.markers)
         {
-            SpawnAtTime(marker.obstacle ,marker.time + timeOffset, $"Marker_{marker.time:F2}s");
+            SpawnAtTime(marker.obstacle ,marker.time + timeOffset, $"Marker_{marker.time:F2}s", marker.debugName);
         }
     }
 
-    void SpawnAtTime(GameObject spawnObject,float time, string name)
+    void SpawnAtTime(GameObject spawnObject,float time, string name, string debugName)
     {
         float x = time * unitsPerSecond;
 
         var obj = Instantiate(spawnObject, transform);
+        obj.GetComponentInChildren<TextMeshProUGUI>().text = debugName;
         obj.name = name;
         obj.transform.localPosition = new Vector3(x, 0f, 0f);
     }

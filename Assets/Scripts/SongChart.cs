@@ -14,5 +14,6 @@ public class SongChart : ScriptableObject
     {
         public float time;          // seconds into the song
         public GameObject obstacle;
+        public string debugName;
     }
 }

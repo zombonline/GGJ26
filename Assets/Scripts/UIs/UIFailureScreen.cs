@@ -7,8 +7,10 @@ public class UIFailureScreen : MonoBehaviour
     [SerializeField] private GameManager gameManager;
     
     [Header("Components")]
-    [SerializeField] private CanvasGroup canvasGroup;
+    [SerializeField] private Animator animator;
     [SerializeField] private Button retryButton;
+    
+    private static readonly int Showing = Animator.StringToHash("Showing");
     
     private void Awake()
     {
@@ -27,9 +29,7 @@ public class UIFailureScreen : MonoBehaviour
     
     public void Show(bool show)
     {
-        gameObject.SetActive(show);
-        canvasGroup.alpha = show ? 1 : 0;
-        
+        animator.SetBool(Showing, show);
         if (show)
         {
             retryButton.Select();

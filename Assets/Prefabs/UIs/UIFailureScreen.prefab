@@ -693,6 +693,7 @@ GameObject:
   - component: {fileID: 8586927160015914326}
   - component: {fileID: 1016693775618136700}
   - component: {fileID: 990017806435374759}
+  - component: {fileID: 100508697175864837}
   m_Layer: 5
   m_Name: UIFailureScreen
   m_TagString: Untagged
@@ -734,7 +735,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIFailureScreen
   gameManager: {fileID: 0}
-  canvasGroup: {fileID: 990017806435374759}
+  animator: {fileID: 100508697175864837}
   retryButton: {fileID: 8858508584810153958}
 --- !u!225 &990017806435374759
 CanvasGroup:
@@ -748,6 +749,28 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!95 &100508697175864837
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5457567375222917189}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 906c2ceef2aadd244aa02a3c028f044e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 2
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8627402464332301925
 GameObject:
   m_ObjectHideFlags: 0

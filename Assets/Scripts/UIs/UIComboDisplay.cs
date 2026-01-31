@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class UIComboDisplay : MonoBehaviour
@@ -7,7 +9,8 @@ public class UIComboDisplay : MonoBehaviour
     [SerializeField] private Player player;
     
     [Header("Components")]
-    [SerializeField] private TextMeshProUGUI text;
+    [SerializeField] private TextMeshProUGUI rimText;
+    [SerializeField] private TextMeshProUGUI comboText;
     [SerializeField] private CanvasGroup canvasGroup;
 
     [Header("Settings")] 
@@ -15,6 +18,9 @@ public class UIComboDisplay : MonoBehaviour
     [SerializeField] private AnimationCurve decayCurve;
     [SerializeField] private float scaleDuration;
     [SerializeField] private AnimationCurve scaleCurve;
+    [SerializeField] private float randomAngleFrom;
+    [SerializeField] private float randomAngleTo;
+    [SerializeField] private List<Color> textColors;
 
     private int _lastValue = 0;
     private float _lastChangeTime = float.NegativeInfinity;
@@ -44,7 +50,12 @@ public class UIComboDisplay : MonoBehaviour
     {
         if (player.Combo > _lastValue)
         {
-            text.text = player.Combo.ToString();
+            rimText.transform.localEulerAngles = new Vector3(0f, 0f, Random.Range(randomAngleFrom, randomAngleTo));
+            comboText.text = player.Combo.ToString();
+            rimText.text = player.Combo.ToString();
+            Color selectedColor = textColors[Random.Range(0, textColors.Count)];
+            comboText.color = selectedColor;
+            rimText.color = selectedColor * 0.25f + Color.black * 0.75f;
             _lastChangeTime = Time.time;
         }
         _lastValue = player.Combo;
@@ -55,12 +66,12 @@ public class UIComboDisplay : MonoBehaviour
         if (Time.time - _lastChangeTime < Mathf.Max(decayDuration, scaleDuration))
         {
             canvasGroup.alpha = decayCurve.Evaluate((Time.time - _lastChangeTime) / decayDuration);
-            text.transform.localScale = Vector3.one * scaleCurve.Evaluate((Time.time - _lastChangeTime) / scaleDuration);
+            rimText.transform.localScale = Vector3.one * scaleCurve.Evaluate((Time.time - _lastChangeTime) / scaleDuration);
         }
         else
         {
             canvasGroup.alpha = 0;
-            text.transform.localScale = Vector3.one;
+            rimText.transform.localScale = Vector3.one;
         }
     }
 }

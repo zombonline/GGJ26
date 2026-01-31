@@ -38,7 +38,6 @@ public class Mask : MonoBehaviour
         _currentEnergy -= energyDecay * Time.deltaTime;
         if (_currentEnergy <= 0f)
         {
-            Debug.Log("Energy decayed");
             _failureTimer = timeTillFailure;
             _currentEnergy = 0f;
         }
@@ -55,7 +54,6 @@ public class Mask : MonoBehaviour
         _failureTimer -= Time.deltaTime;
         if (_failureTimer <= 0f)
         {
-            Debug.Log("Timeout");
             gameManager.FailGame();
         }
     }

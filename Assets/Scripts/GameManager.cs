@@ -7,11 +7,6 @@ public class GameManager : MonoBehaviour
     public UnityEvent OnResume;
     public UnityEvent OnGameFailed;
 
-    private void Update()
-    {
-        Debug.Log(Time.timeScale);
-    }
-    
     public void PauseGame()
     {
         Time.timeScale = 0;

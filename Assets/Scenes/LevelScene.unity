@@ -165,8 +165,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Mask
   gameManager: {fileID: 160377895}
   maxEnergy: 100
-  energyDecay: 100
-  timeTillFailure: 1
+  energyDecay: 10
+  timeTillFailure: 5
 --- !u!1 &160377893
 GameObject:
   m_ObjectHideFlags: 0

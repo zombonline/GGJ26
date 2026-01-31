@@ -19,7 +19,7 @@ public class ParallaxObject : MonoBehaviour
 
         Vector2 pivotedOffset = (spriteRenderer.sprite.pivot - spriteRenderer.sprite.textureRect.size / 2f) / spriteRenderer.sprite.pixelsPerUnit * spriteRenderer.transform.lossyScale.x * -1f;
         Vector3 pivotedCentre = transform.position + (Vector3)pivotedOffset;
-        Vector3 halfSize = (spriteRenderer.sprite.textureRect.size / spriteRenderer.sprite.pixelsPerUnit + randomRanges) / 2f * spriteRenderer.transform.lossyScale.x;
+        Vector3 halfSize = (spriteRenderer.sprite.textureRect.size / spriteRenderer.sprite.pixelsPerUnit * spriteRenderer.transform.lossyScale.x + randomRanges) / 2f;
         
         Gizmos.color = Color.cyan;
         Gizmos.DrawWireSphere(pivotedCentre, 0.01f);
@@ -32,7 +32,7 @@ public class ParallaxObject : MonoBehaviour
     public void MakeRecurrentCopy(float layerLength)
     {
         Vector2 pivotedOffset = (spriteRenderer.sprite.pivot - spriteRenderer.sprite.textureRect.size / 2f) / spriteRenderer.sprite.pixelsPerUnit * spriteRenderer.transform.lossyScale.x * -1f;
-        Vector3 halfSize = (spriteRenderer.sprite.textureRect.size / spriteRenderer.sprite.pixelsPerUnit + randomRanges) / 2f * spriteRenderer.transform.lossyScale.x;
+        Vector3 halfSize = (spriteRenderer.sprite.textureRect.size / spriteRenderer.sprite.pixelsPerUnit * spriteRenderer.transform.lossyScale.x + randomRanges) / 2f;
         _rightExtend = halfSize.x + pivotedOffset.x;
         
         _recurrentCopies[0] = CreateRecurrentCopy(transform.position);
@@ -53,7 +53,10 @@ public class ParallaxObject : MonoBehaviour
         go.transform.SetParent(transform);
         go.transform.position = position;
         go.transform.localScale = Vector3.one;
-        go.GetComponent<SpriteRenderer>().sprite = spriteRenderer.sprite;
+        SpriteRenderer sr = go.GetComponent<SpriteRenderer>();
+        sr.sprite = spriteRenderer.sprite;
+        sr.sortingOrder = spriteRenderer.sortingOrder;
+        
         
         return go.transform;
     }

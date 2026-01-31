@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxObject
   spriteRenderer: {fileID: 4874381787364723588}
-  randomRanges: {x: 2, y: 0}
+  randomRanges: {x: 1, y: 0}
 --- !u!212 &4874381787364723588
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -93,7 +93,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -40
   m_Sprite: {fileID: 21300000, guid: 17e7d1203ec83ea4fb1f83be814bdae3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxObject
   spriteRenderer: {fileID: 2977585890162339315}
-  randomRanges: {x: 2, y: 0}
+  randomRanges: {x: 1, y: 0}
 --- !u!212 &2977585890162339315
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -198,7 +198,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -40
   m_Sprite: {fileID: 21300000, guid: eaf9a5c823dee5d40b9849b68a99509a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -256,7 +256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxObject
   spriteRenderer: {fileID: 3762659864132456200}
-  randomRanges: {x: 12, y: 0}
+  randomRanges: {x: 6, y: 0}
 --- !u!212 &3762659864132456200
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -303,7 +303,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 30
   m_Sprite: {fileID: 21300000, guid: b7006d69cd185b4498e05b98e4d45d9e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -361,7 +361,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxObject
   spriteRenderer: {fileID: 7167740998326665077}
-  randomRanges: {x: 6, y: 0}
+  randomRanges: {x: 3, y: 0}
 --- !u!212 &7167740998326665077
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -408,7 +408,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -30
   m_Sprite: {fileID: 21300000, guid: 40bbd69f6b6e6314b99019d3ec6b53c2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -466,7 +466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxObject
   spriteRenderer: {fileID: 7526160663802463899}
-  randomRanges: {x: 6, y: 0}
+  randomRanges: {x: 3, y: 0}
 --- !u!212 &7526160663802463899
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -513,7 +513,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -30
   m_Sprite: {fileID: 21300000, guid: dd3b150be05d1ca41b84bb208b3128ff, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -618,7 +618,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -30
   m_Sprite: {fileID: 21300000, guid: d9c081a4fb2c6804a970e675de966b2c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -729,7 +729,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxObject
   spriteRenderer: {fileID: 1254467197529687380}
-  randomRanges: {x: 6, y: 0}
+  randomRanges: {x: 3, y: 0}
 --- !u!212 &1254467197529687380
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -776,7 +776,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -30
   m_Sprite: {fileID: 21300000, guid: b4ae428472d2427458d2932dac07dab1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -935,7 +935,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 20
   m_Sprite: {fileID: 21300000, guid: b686defc4582fd348ac75ad982c648b4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -993,7 +993,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxObject
   spriteRenderer: {fileID: 5671540984596469829}
-  randomRanges: {x: 16, y: 0}
+  randomRanges: {x: 8, y: 0}
 --- !u!212 &5671540984596469829
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1040,7 +1040,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: 34051503e31879a42b96d54201907ed8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1098,7 +1098,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxObject
   spriteRenderer: {fileID: 3516376347780238802}
-  randomRanges: {x: 2, y: 0}
+  randomRanges: {x: 1, y: 0}
 --- !u!212 &3516376347780238802
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1145,7 +1145,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -40
   m_Sprite: {fileID: 21300000, guid: 64b4211e1921a444e9aca8e056dd1bee, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1203,7 +1203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxObject
   spriteRenderer: {fileID: 475275222935853505}
-  randomRanges: {x: 16, y: 0}
+  randomRanges: {x: 8, y: 0}
 --- !u!212 &475275222935853505
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1250,7 +1250,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: 778b613d640896d4581846ddc9b3fdf9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1308,7 +1308,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxObject
   spriteRenderer: {fileID: 8660566165040559351}
-  randomRanges: {x: 12, y: 0}
+  randomRanges: {x: 6, y: 0}
 --- !u!212 &8660566165040559351
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1355,7 +1355,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -20
   m_Sprite: {fileID: 21300000, guid: 942817b01a2d6d24ba7ba996f1ecf4da, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1413,7 +1413,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxObject
   spriteRenderer: {fileID: 6038894057955919579}
-  randomRanges: {x: 12, y: 0}
+  randomRanges: {x: 6, y: 0}
 --- !u!212 &6038894057955919579
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1460,7 +1460,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 30
   m_Sprite: {fileID: 21300000, guid: ce63b526da7c79f4ab4a62c3b174fc58, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1565,7 +1565,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 7d060964d3643e1479a1c3fa0919607f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1623,7 +1623,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxObject
   spriteRenderer: {fileID: 3121854785550001563}
-  randomRanges: {x: 12, y: 0}
+  randomRanges: {x: 6, y: 0}
 --- !u!212 &3121854785550001563
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1670,7 +1670,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -20
   m_Sprite: {fileID: 21300000, guid: 52e882580605fcf4c9bddfb281407d11, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1728,7 +1728,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxObject
   spriteRenderer: {fileID: 4343360268184345654}
-  randomRanges: {x: 12, y: 0}
+  randomRanges: {x: 6, y: 0}
 --- !u!212 &4343360268184345654
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1775,7 +1775,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 30
   m_Sprite: {fileID: 21300000, guid: 55dd06607a8d76645987f073ed81ca59, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1985,7 +1985,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -20
   m_Sprite: {fileID: 21300000, guid: dd383f7292ff56b4aa924efa4b3e9491, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2043,7 +2043,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxObject
   spriteRenderer: {fileID: 262091809483989824}
-  randomRanges: {x: 12, y: 0}
+  randomRanges: {x: 6, y: 0}
 --- !u!212 &262091809483989824
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2090,7 +2090,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 30
   m_Sprite: {fileID: 21300000, guid: 7055d6019128ad549aa10c28dc14eaf4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2248,7 +2248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxObject
   spriteRenderer: {fileID: 8074043822109567240}
-  randomRanges: {x: 18, y: 0}
+  randomRanges: {x: 9, y: 0}
 --- !u!212 &8074043822109567240
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2295,7 +2295,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 4b7926334b19bb849b1d6d5969d61981, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2307,37 +2307,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &4903718186240837047
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 161026307408331789}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &161026307408331789
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4903718186240837047}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3632849291689249178}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4982402817760399997
 GameObject:
   m_ObjectHideFlags: 0
@@ -2392,7 +2361,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxBackground
   mainCamera: {fileID: 0}
-  levelMover: {fileID: 0}
+  levelMoverTransform: {fileID: 0}
   layers: []
 --- !u!1 &5070411298881391538
 GameObject:
@@ -2440,7 +2409,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxObject
   spriteRenderer: {fileID: 9211261885879962080}
-  randomRanges: {x: 18, y: 0}
+  randomRanges: {x: 9, y: 0}
 --- !u!212 &9211261885879962080
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2487,7 +2456,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: d85ee09b15a571f428a7578a820da267, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2545,7 +2514,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxObject
   spriteRenderer: {fileID: 6933490721183369665}
-  randomRanges: {x: 12, y: 0}
+  randomRanges: {x: 6, y: 0}
 --- !u!212 &6933490721183369665
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2592,7 +2561,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 30
   m_Sprite: {fileID: 21300000, guid: 6f713adcd1cd10747ab98530c6731719, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2650,7 +2619,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxObject
   spriteRenderer: {fileID: 6340657285463023622}
-  randomRanges: {x: 16, y: 0}
+  randomRanges: {x: 8, y: 0}
 --- !u!212 &6340657285463023622
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2697,7 +2666,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: 0d988eee02a6b0e47b430840076cf8d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2755,7 +2724,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxObject
   spriteRenderer: {fileID: 4981671241614424279}
-  randomRanges: {x: 12, y: 0}
+  randomRanges: {x: 6, y: 0}
 --- !u!212 &4981671241614424279
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2802,7 +2771,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 30
   m_Sprite: {fileID: 21300000, guid: 4880ed79ec4ad8344a1f84078456f012, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2860,7 +2829,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxObject
   spriteRenderer: {fileID: 6209854185000342581}
-  randomRanges: {x: 18, y: 0}
+  randomRanges: {x: 9, y: 0}
 --- !u!212 &6209854185000342581
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2907,7 +2876,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 7e37382db8909e6428c2ac972681278d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3013,7 +2982,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxObject
   spriteRenderer: {fileID: 7738531643402139366}
-  randomRanges: {x: 6, y: 0}
+  randomRanges: {x: 3, y: 0}
 --- !u!212 &7738531643402139366
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3060,7 +3029,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -30
   m_Sprite: {fileID: 21300000, guid: 25a3dc68b205b8b43adaecbb37d0e0e8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3165,7 +3134,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: 117a0f8ab7b671147844100816e40bb4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3274,7 +3243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxObject
   spriteRenderer: {fileID: 1214659170633875675}
-  randomRanges: {x: 2, y: 0}
+  randomRanges: {x: 1, y: 0}
 --- !u!212 &1214659170633875675
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3321,7 +3290,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -40
   m_Sprite: {fileID: 21300000, guid: 528faca995c134c43a907e18e084ca16, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3430,7 +3399,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxObject
   spriteRenderer: {fileID: 4932503909110414742}
-  randomRanges: {x: 16, y: 0}
+  randomRanges: {x: 8, y: 0}
 --- !u!212 &4932503909110414742
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3477,7 +3446,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: f591fbc3821421e40840c2226c75d09d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3625,7 +3594,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxObject
   spriteRenderer: {fileID: 5857658024151018407}
-  randomRanges: {x: 24, y: 0}
+  randomRanges: {x: 12, y: 0}
 --- !u!212 &5857658024151018407
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3672,7 +3641,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: 602f7f03a1560d14a82d979a9a985689, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3718,7 +3687,6 @@ Transform:
   - {fileID: 6431306621207856770}
   - {fileID: 4147974643886331549}
   - {fileID: 5482892047924185296}
-  - {fileID: 161026307408331789}
   m_Father: {fileID: 1276022128913467658}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6564062339109429398
@@ -3782,7 +3750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxObject
   spriteRenderer: {fileID: 6525252638770382357}
-  randomRanges: {x: 12, y: 0}
+  randomRanges: {x: 6, y: 0}
 --- !u!212 &6525252638770382357
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3829,7 +3797,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -20
   m_Sprite: {fileID: 21300000, guid: b2f07347044ab41449803ddb8af91929, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3887,7 +3855,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ParallaxObject
   spriteRenderer: {fileID: 3051046928441981633}
-  randomRanges: {x: 24, y: 0}
+  randomRanges: {x: 12, y: 0}
 --- !u!212 &3051046928441981633
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3934,7 +3902,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: fba67c3c063dc9b4cbe0174de9ccfdee, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

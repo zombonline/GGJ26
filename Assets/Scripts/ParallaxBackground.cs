@@ -6,7 +6,7 @@ public class ParallaxBackground : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private Camera mainCamera;
-    [SerializeField] private LevelMover levelMover;
+    [SerializeField] private Transform levelMoverTransform;
 
     [Header("Components")]
     [SerializeField] private List<ParallaxBackgroundLayer> layers;
@@ -20,11 +20,11 @@ public class ParallaxBackground : MonoBehaviour
     
     private void Update()
     {
-        float moveDelta = (levelMover.transform.position.x - _lastLevelMoverPosition.x) * -1f;
+        float moveDelta = (levelMoverTransform.transform.position.x - _lastLevelMoverPosition.x) * -1f;
         foreach (ParallaxBackgroundLayer layer in layers)
         {
             layer.Move(mainCamera, moveDelta);
         }
-        _lastLevelMoverPosition = levelMover.transform.position;
+        _lastLevelMoverPosition = levelMoverTransform.transform.position;
     }
 }

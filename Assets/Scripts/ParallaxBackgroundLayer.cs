@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class ParallaxBackgroundLayer : MonoBehaviour
@@ -13,6 +14,7 @@ public class ParallaxBackgroundLayer : MonoBehaviour
 
     private void Awake()
     {
+        parallaxObjects = transform.GetComponentsInChildren<ParallaxObject>().ToList();
         foreach (ParallaxObject parallaxObject in parallaxObjects)
         {
             parallaxObject.MakeRecurrentCopy(contentLength);

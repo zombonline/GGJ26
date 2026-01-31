@@ -43,7 +43,7 @@ public class ParallaxObject : MonoBehaviour
         for (int i = 0; i < _recurrentCopies.Length; i++)
         {
             _recurrentCopyCentres[i] = _recurrentCopies[i].position;
-            _recurrentCopyOffsets[i] = Vector3.zero;
+            _recurrentCopyOffsets[i] = new Vector3(Random.Range(-0.5f, 0.5f) * randomRanges.x, Random.Range(-0.5f, 0.5f) * randomRanges.y, 0f);
         }
     }
 
@@ -66,7 +66,7 @@ public class ParallaxObject : MonoBehaviour
             if (_recurrentCopyCentres[i].x + _rightExtend < mainCamera.orthographicSize * Screen.width / Screen.height * -1f)
             {
                 _recurrentCopyCentres[i] += Vector3.right * layerLength * 3f;
-                _recurrentCopyOffsets[i] = new Vector3(Random.Range(0.5f, 0.5f) * randomRanges.x, Random.Range(0.5f, 0.5f) * randomRanges.y, 0f);
+                _recurrentCopyOffsets[i] = new Vector3(Random.Range(-0.5f, 0.5f) * randomRanges.x, Random.Range(-0.5f, 0.5f) * randomRanges.y, 0f);
             }
             _recurrentCopies[i].position = _recurrentCopyCentres[i] + _recurrentCopyOffsets[i];
         }

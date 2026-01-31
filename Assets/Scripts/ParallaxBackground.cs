@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class ParallaxBackground : MonoBehaviour
@@ -14,7 +15,7 @@ public class ParallaxBackground : MonoBehaviour
     
     private void Awake()
     {
-        
+        layers = transform.GetComponentsInChildren<ParallaxBackgroundLayer>().ToList();
     }
     
     private void Update()

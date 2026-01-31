@@ -55,7 +55,7 @@ public class MboyChartReader : MonoBehaviour
                             break;
                     }
                     if(obstacle == null) continue; // skip if no obstacle (e.g. Jump track)
-                    var newMarker = new SongChart.Marker{time = timeSeconds, obstacle = obstacle};
+                    var newMarker = new SongChart.Marker{time = timeSeconds, obstacle = obstacle, debugName = track.name + " " + bar.index + " " + note.pos};
                     chart.markers.Add(newMarker);
                 }
             }

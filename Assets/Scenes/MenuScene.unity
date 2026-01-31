@@ -2175,6 +2175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d833d82e9fe7344e9f220fa9e30472b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIMainMenu
+  audioMixer: {fileID: 24100000, guid: 9efdc0a502bde01478d534d82e9ee4b4, type: 2}
   mainPage: {fileID: 893356483}
   mainPageFirstSelectable: {fileID: 29244515}
   settingsPage: {fileID: 97164418}
@@ -3722,6 +3723,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d833d82e9fe7344e9f220fa9e30472b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIMainMenu
+  audioMixer: {fileID: 0}
   mainPage: {fileID: 0}
   mainPageFirstSelectable: {fileID: 0}
   settingsPage: {fileID: 0}

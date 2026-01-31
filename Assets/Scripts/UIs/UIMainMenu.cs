@@ -1,8 +1,12 @@
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 
 public class UIMainMenu : MonoBehaviour
 {
+    [Header("References")]
+    [SerializeField] private AudioMixer audioMixer;
+    
     [Header("Components (Main Page)")]
     [SerializeField] private GameObject mainPage;
     [SerializeField] private Selectable mainPageFirstSelectable;
@@ -16,7 +20,7 @@ public class UIMainMenu : MonoBehaviour
     [Header("Components (Credits Page)")]
     [SerializeField] private GameObject creditsPage;
     [SerializeField] private Selectable creditsPageFirstSelectable;
-
+    
     // ======== General ========
 
     private void HideAllPages()
@@ -51,15 +55,22 @@ public class UIMainMenu : MonoBehaviour
     
     public void ChangeSoundVolume(float volume)
     {
-        
+        audioMixer.SetFloat("SoundVolume", LinearToDecibel((int)volume / 4f));
+        if (audioMixer.GetFloat("SoundVolume", out float value))
+            Debug.Log(value);
     }
 
     public void ChangeMusicVolume(float volume)
     {
-        
+        audioMixer.SetFloat("MusicVolume", LinearToDecibel(volume / 4f));
     }
     
-    // ======== Settings Page ========
+    private static float LinearToDecibel(float linear)
+    {
+        return linear != 0 ? 20.0f * Mathf.Log10(linear) : -144.0f;
+    }
+    
+    // ======== Credits Page ========
 
     public void ShowCreditsPage()
     {

@@ -92,8 +92,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 48
-  m_fontSizeBase: 48
+  m_fontSize: 56
+  m_fontSizeBase: 56
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -595,7 +595,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UIPauseMenu
   gameManager: {fileID: 0}
   animator: {fileID: 515688923005533111}
-  canvasGroup: {fileID: 5151277396023990012}
   resumeButton: {fileID: 2730347463489874984}
 --- !u!225 &5151277396023990012
 CanvasGroup:

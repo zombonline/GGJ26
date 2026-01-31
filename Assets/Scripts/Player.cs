@@ -5,14 +5,6 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
-    private enum InputType
-    {
-        None,
-        Light,
-        Heavy,
-        Repeating
-    }
-    
     [Header("References")]
     [SerializeField] private GameManager gameManager;
     [SerializeField] private TextMeshProUGUI attackDebugText;
@@ -21,12 +13,6 @@ public class Player : MonoBehaviour
     [SerializeField] private float doubleInputInterval;
     [SerializeField] private float repeatingInputInterval;
     [SerializeField] private int repeatingInputMinCount;
-    
-    private InputType _currentInputType = InputType.None;
-    
-    private bool[] _inputValue =  new bool[2];
-    private float _lastInputTime =  float.NegativeInfinity;
-    private int _repeatingInputCount = 0;
 
     public int Combo
     {
@@ -46,8 +32,6 @@ public class Player : MonoBehaviour
     
     private void Update()
     {
-        ParseInput();
-        
         // debug
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
@@ -64,14 +48,22 @@ public class Player : MonoBehaviour
     
     // ======== Input Messages ========
     
-    private void OnInput1(InputValue value)
+    private void OnJump(InputValue value)
     {
-        CollectInput(0, value.isPressed);
+        if (Time.timeScale == 0)
+            return;
+        
+        // Perform jump here
+
     }
 
-    private void OnInput2(InputValue value)
+    private void OnAttack(InputValue value)
     {
-        CollectInput(1, value.isPressed);
+        if (Time.timeScale == 0)
+            return;
+        
+        // Perform attack here
+
     }
     
     private void OnPause()
@@ -80,53 +72,5 @@ public class Player : MonoBehaviour
             return;
         
         gameManager.PauseGame();
-    }
-    
-    // ======== Input Parsing ========
-    
-    private void CollectInput(int inputIndex, bool isPressed)
-    {
-        _inputValue[inputIndex] = isPressed;
-
-        if (isPressed)
-        {
-            int inputCount = 0;
-            for (int i = 0; i < _inputValue.Length; i++)
-            {
-                inputCount += _inputValue[i] ?  1 : 0;
-            }
-
-            if (inputCount == 2 && _lastInputTime > Time.unscaledTime - doubleInputInterval)
-            {
-                _repeatingInputCount = 0;
-                _currentInputType = InputType.Heavy;
-            }
-            else if (inputCount == 1)
-            {
-                if (_lastInputTime > Time.unscaledTime - repeatingInputInterval)
-                {
-                    _repeatingInputCount++;
-                    if (_repeatingInputCount >= repeatingInputMinCount)
-                    {
-                        _currentInputType = InputType.Repeating;
-                    }
-                }
-                else
-                {
-                    _repeatingInputCount = 0;
-                    _currentInputType = InputType.Light;
-                }
-            }
-            
-            _lastInputTime = Time.unscaledTime;
-        }
-    }
-
-    private void ParseInput()
-    {
-        if (Time.timeScale == 0)
-            return;
-        
-        attackDebugText.text = _currentInputType.ToString();
     }
 }

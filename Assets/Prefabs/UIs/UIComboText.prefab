@@ -280,7 +280,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   randomAngleFrom: -10
-  randomAngleTo: 10
+  randomAngleTo: 20
   textColors:
   - {r: 0.41006586, g: 0.8668612, b: 0.9150943, a: 1}
   - {r: 0.493948, g: 0.65536946, b: 0.9433962, a: 1}

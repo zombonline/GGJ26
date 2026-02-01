@@ -989,7 +989,10 @@ MonoBehaviour:
   - {fileID: 7847388857682420121}
   - {fileID: 8180845045462978417}
   continueButton: {fileID: 2378248589638378916}
-  maskIcons: []
+  maskIcons:
+  - {fileID: -3954504386300892163, guid: 03118d7de84a06e44bc0c6215125018c, type: 3}
+  - {fileID: 1357508017302701518, guid: 3c36f62d669a4bc41a704671009e48c7, type: 3}
+  - {fileID: 2775339956066345999, guid: 4ef41237c22617040ae715ed11bb48b0, type: 3}
 --- !u!225 &7892983508722373361
 CanvasGroup:
   m_ObjectHideFlags: 0

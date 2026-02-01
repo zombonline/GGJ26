@@ -485,7 +485,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &28747935
 GameObject:
   m_ObjectHideFlags: 0
@@ -1132,7 +1132,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &53287508
 GameObject:
   m_ObjectHideFlags: 0
@@ -1598,7 +1598,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &95376050
 GameObject:
   m_ObjectHideFlags: 0
@@ -2605,6 +2605,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6b53297ec2d5ec46b78fad76510d95a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  OnLevelStart:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 712098702}
+        m_TargetAssemblyTypeName: UICountdownDisplay, Assembly-CSharp
+        m_MethodName: StartCountdown
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnCountdownCompleted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1088711392}
+        m_TargetAssemblyTypeName: ChartSpawner, Assembly-CSharp
+        m_MethodName: Rebuild
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1088711390}
+        m_TargetAssemblyTypeName: SongPlayer, Assembly-CSharp
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   OnPause:
     m_PersistentCalls:
       m_Calls:
@@ -2646,6 +2688,21 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+  OnLevelCompleted:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8872233090934594972}
+        m_TargetAssemblyTypeName: UISuccessScreen, Assembly-CSharp
+        m_MethodName: Show
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
   OnGameFailed:
     m_PersistentCalls:
@@ -2849,7 +2906,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &182981768
 GameObject:
   m_ObjectHideFlags: 0
@@ -3077,7 +3134,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &215030972
 GameObject:
   m_ObjectHideFlags: 0
@@ -3554,7 +3611,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &249200170
 GameObject:
   m_ObjectHideFlags: 0
@@ -3680,7 +3737,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &258765676
 GameObject:
   m_ObjectHideFlags: 0
@@ -4906,7 +4963,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &352345211
 GameObject:
   m_ObjectHideFlags: 0
@@ -5258,7 +5315,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &369807379
 GameObject:
   m_ObjectHideFlags: 0
@@ -5641,6 +5698,7 @@ RectTransform:
   - {fileID: 836475098}
   - {fileID: 2099687399}
   - {fileID: 1056949541}
+  - {fileID: 712098701}
   - {fileID: 771093023}
   - {fileID: 968115711299382984}
   - {fileID: 1853275688}
@@ -6147,7 +6205,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &482672200
 GameObject:
   m_ObjectHideFlags: 0
@@ -7324,7 +7382,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &558663046
 GameObject:
   m_ObjectHideFlags: 0
@@ -8576,7 +8634,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &667981243
 GameObject:
   m_ObjectHideFlags: 0
@@ -8691,7 +8749,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &676697711
 GameObject:
   m_ObjectHideFlags: 0
@@ -9272,6 +9330,139 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1001 &712098700
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 431880452}
+    m_Modifications:
+    - target: {fileID: 264056601173584, guid: 7044d11a26179164f86b3a5593f4f1be, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 240
+      objectReference: {fileID: 0}
+    - target: {fileID: 282255435890112339, guid: 7044d11a26179164f86b3a5593f4f1be, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 282255435890112339, guid: 7044d11a26179164f86b3a5593f4f1be, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 282255435890112339, guid: 7044d11a26179164f86b3a5593f4f1be, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 282255435890112339, guid: 7044d11a26179164f86b3a5593f4f1be, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 282255435890112339, guid: 7044d11a26179164f86b3a5593f4f1be, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 282255435890112339, guid: 7044d11a26179164f86b3a5593f4f1be, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 282255435890112339, guid: 7044d11a26179164f86b3a5593f4f1be, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 600
+      objectReference: {fileID: 0}
+    - target: {fileID: 282255435890112339, guid: 7044d11a26179164f86b3a5593f4f1be, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 282255435890112339, guid: 7044d11a26179164f86b3a5593f4f1be, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 282255435890112339, guid: 7044d11a26179164f86b3a5593f4f1be, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 282255435890112339, guid: 7044d11a26179164f86b3a5593f4f1be, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 282255435890112339, guid: 7044d11a26179164f86b3a5593f4f1be, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 282255435890112339, guid: 7044d11a26179164f86b3a5593f4f1be, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 282255435890112339, guid: 7044d11a26179164f86b3a5593f4f1be, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 282255435890112339, guid: 7044d11a26179164f86b3a5593f4f1be, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 282255435890112339, guid: 7044d11a26179164f86b3a5593f4f1be, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 282255435890112339, guid: 7044d11a26179164f86b3a5593f4f1be, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 282255435890112339, guid: 7044d11a26179164f86b3a5593f4f1be, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 282255435890112339, guid: 7044d11a26179164f86b3a5593f4f1be, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 282255435890112339, guid: 7044d11a26179164f86b3a5593f4f1be, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1919034029870025621, guid: 7044d11a26179164f86b3a5593f4f1be, type: 3}
+      propertyPath: songPlayer
+      value: 
+      objectReference: {fileID: 1088711390}
+    - target: {fileID: 1919034029870025621, guid: 7044d11a26179164f86b3a5593f4f1be, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 160377895}
+    - target: {fileID: 1919034029870025621, guid: 7044d11a26179164f86b3a5593f4f1be, type: 3}
+      propertyPath: delayBeforeCountdown
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2719591681365915769, guid: 7044d11a26179164f86b3a5593f4f1be, type: 3}
+      propertyPath: m_Name
+      value: UICountdownText
+      objectReference: {fileID: 0}
+    - target: {fileID: 4243545839327162891, guid: 7044d11a26179164f86b3a5593f4f1be, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 240
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7044d11a26179164f86b3a5593f4f1be, type: 3}
+--- !u!224 &712098701 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 282255435890112339, guid: 7044d11a26179164f86b3a5593f4f1be, type: 3}
+  m_PrefabInstance: {fileID: 712098700}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &712098702 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1919034029870025621, guid: 7044d11a26179164f86b3a5593f4f1be, type: 3}
+  m_PrefabInstance: {fileID: 712098700}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f99c443c779385a469c28ad31dbd227a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UICountdownDisplay
 --- !u!1 &715470508
 GameObject:
   m_ObjectHideFlags: 0
@@ -10788,7 +10979,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &836475097
 GameObject:
   m_ObjectHideFlags: 0
@@ -11427,7 +11618,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &861927417
 GameObject:
   m_ObjectHideFlags: 0
@@ -11655,7 +11846,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &873371115
 GameObject:
   m_ObjectHideFlags: 0
@@ -11770,7 +11961,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &873429581
 GameObject:
   m_ObjectHideFlags: 0
@@ -12284,7 +12475,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &904439783
 GameObject:
   m_ObjectHideFlags: 0
@@ -14175,7 +14366,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &1022126993
 GameObject:
   m_ObjectHideFlags: 0
@@ -14301,7 +14492,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &1034893665
 GameObject:
   m_ObjectHideFlags: 0
@@ -14804,7 +14995,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &1047230869
 GameObject:
   m_ObjectHideFlags: 0
@@ -15424,7 +15615,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &1081252822
 GameObject:
   m_ObjectHideFlags: 0
@@ -15537,23 +15728,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 6470787136745419535, guid: 0c1744ed0852f0f4ea055e112c2ee281, type: 3}
   m_PrefabInstance: {fileID: 7058307885260204498}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1088711389
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1088711386}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 573231295d8122b4b9ef664eae93a80a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MboyChartReader
-  mboyJson: {fileID: 1743372512206119097, guid: f048ec2cc1b0e1f4a878c95a4abf2d35, type: 3}
-  chart: {fileID: 11400000, guid: 886a3dc08c8e15b4eb3c7b24f4f5f771, type: 2}
-  jumpObstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
-  attackObstacle: {fileID: 4105241903175021605, guid: 3d8d462d4f5379a4bba0a9e1719c060c, type: 3}
-  heavyAttackObstacle: {fileID: 4105241903175021605, guid: 0537401ae4445f34d812f687dc3c41d7, type: 3}
 --- !u!114 &1088711390 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1020118846623830550, guid: 0c1744ed0852f0f4ea055e112c2ee281, type: 3}
@@ -16118,7 +16292,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &1111307604
 GameObject:
   m_ObjectHideFlags: 0
@@ -16244,7 +16418,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &1112758334
 GameObject:
   m_ObjectHideFlags: 0
@@ -16781,7 +16955,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &1211957731
 GameObject:
   m_ObjectHideFlags: 0
@@ -16907,7 +17081,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &1226830934
 GameObject:
   m_ObjectHideFlags: 0
@@ -17022,7 +17196,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &1251286007
 GameObject:
   m_ObjectHideFlags: 0
@@ -17363,7 +17537,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &1273337819
 GameObject:
   m_ObjectHideFlags: 0
@@ -17840,7 +18014,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &1293255313
 GameObject:
   m_ObjectHideFlags: 0
@@ -18252,7 +18426,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &1325627647
 GameObject:
   m_ObjectHideFlags: 0
@@ -19083,7 +19257,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &1399588812
 GameObject:
   m_ObjectHideFlags: 0
@@ -19552,7 +19726,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &1437967880
 GameObject:
   m_ObjectHideFlags: 0
@@ -21042,7 +21216,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &1513073201
 GameObject:
   m_ObjectHideFlags: 0
@@ -21305,7 +21479,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &1536796147
 GameObject:
   m_ObjectHideFlags: 0
@@ -21420,7 +21594,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &1543300328
 GameObject:
   m_ObjectHideFlags: 0
@@ -21546,7 +21720,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &1549415355
 GameObject:
   m_ObjectHideFlags: 0
@@ -21865,7 +22039,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &1576941080
 GameObject:
   m_ObjectHideFlags: 0
@@ -22093,7 +22267,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &1582747142
 GameObject:
   m_ObjectHideFlags: 0
@@ -23074,7 +23248,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &1649045339
 GameObject:
   m_ObjectHideFlags: 0
@@ -23339,7 +23513,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &1665167388
 GameObject:
   m_ObjectHideFlags: 0
@@ -23615,7 +23789,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &1670587937
 GameObject:
   m_ObjectHideFlags: 0
@@ -25246,7 +25420,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &1823250384
 GameObject:
   m_ObjectHideFlags: 0
@@ -31005,7 +31179,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &1927487082
 GameObject:
   m_ObjectHideFlags: 0
@@ -31120,7 +31294,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &1931611916
 GameObject:
   m_ObjectHideFlags: 0
@@ -31518,7 +31692,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &1936627553
 GameObject:
   m_ObjectHideFlags: 0
@@ -31633,7 +31807,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &1939394622
 GameObject:
   m_ObjectHideFlags: 0
@@ -31988,7 +32162,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &1967319170
 GameObject:
   m_ObjectHideFlags: 0
@@ -32216,7 +32390,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &1975391469
 GameObject:
   m_ObjectHideFlags: 0
@@ -32534,7 +32708,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &1996170210
 GameObject:
   m_ObjectHideFlags: 0
@@ -34710,7 +34884,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &2116478231
 GameObject:
   m_ObjectHideFlags: 0
@@ -35145,7 +35319,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
-  canHit: 0
+  canHit: 1
 --- !u!1 &2140391141
 GameObject:
   m_ObjectHideFlags: 0
@@ -35323,7 +35497,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1020118846623830550, guid: 0c1744ed0852f0f4ea055e112c2ee281, type: 3}
       propertyPath: onSongFinished.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1020118846623830550, guid: 0c1744ed0852f0f4ea055e112c2ee281, type: 3}
       propertyPath: onSongFinished.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -35332,7 +35506,7 @@ PrefabInstance:
     - target: {fileID: 1020118846623830550, guid: 0c1744ed0852f0f4ea055e112c2ee281, type: 3}
       propertyPath: onSongFinished.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 8872233090934594972}
+      objectReference: {fileID: 160377895}
     - target: {fileID: 1020118846623830550, guid: 0c1744ed0852f0f4ea055e112c2ee281, type: 3}
       propertyPath: onSongFinished.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -35347,7 +35521,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1020118846623830550, guid: 0c1744ed0852f0f4ea055e112c2ee281, type: 3}
       propertyPath: onSongFinished.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Show
+      value: CompleteLevel
       objectReference: {fileID: 0}
     - target: {fileID: 1020118846623830550, guid: 0c1744ed0852f0f4ea055e112c2ee281, type: 3}
       propertyPath: onSongFinished.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -35355,7 +35529,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1020118846623830550, guid: 0c1744ed0852f0f4ea055e112c2ee281, type: 3}
       propertyPath: onSongFinished.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UISuccessScreen, Assembly-CSharp
+      value: GameManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 1020118846623830550, guid: 0c1744ed0852f0f4ea055e112c2ee281, type: 3}
       propertyPath: onSongFinished.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -35593,10 +35767,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6470787136745419535, guid: 0c1744ed0852f0f4ea055e112c2ee281, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1543300329}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2915939446141822242, guid: 0c1744ed0852f0f4ea055e112c2ee281, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1088711389}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c1744ed0852f0f4ea055e112c2ee281, type: 3}
 --- !u!1001 &8546294913512369476
 PrefabInstance:
@@ -35708,7 +35879,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8208953313034842385, guid: aa04bb05f297037498ab110854183396, type: 3}
       propertyPath: onContinue.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8208953313034842385, guid: aa04bb05f297037498ab110854183396, type: 3}
       propertyPath: onContinue.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -35721,7 +35892,7 @@ PrefabInstance:
     - target: {fileID: 8208953313034842385, guid: aa04bb05f297037498ab110854183396, type: 3}
       propertyPath: onContinue.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1088711392}
+      objectReference: {fileID: 160377895}
     - target: {fileID: 8208953313034842385, guid: aa04bb05f297037498ab110854183396, type: 3}
       propertyPath: onContinue.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -35736,7 +35907,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8208953313034842385, guid: aa04bb05f297037498ab110854183396, type: 3}
       propertyPath: onContinue.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Rebuild
+      value: StartLevel
       objectReference: {fileID: 0}
     - target: {fileID: 8208953313034842385, guid: aa04bb05f297037498ab110854183396, type: 3}
       propertyPath: onContinue.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -35744,7 +35915,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8208953313034842385, guid: aa04bb05f297037498ab110854183396, type: 3}
       propertyPath: onContinue.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: ChartSpawner, Assembly-CSharp
+      value: GameManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8208953313034842385, guid: aa04bb05f297037498ab110854183396, type: 3}
       propertyPath: onContinue.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName

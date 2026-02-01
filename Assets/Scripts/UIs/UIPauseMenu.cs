@@ -37,8 +37,7 @@ public class UIPauseMenu : MonoBehaviour
 
         _resumeCoroutine = null;
     }
-
-
+    
     public void Retry()
     {
         gameManager.Restart();

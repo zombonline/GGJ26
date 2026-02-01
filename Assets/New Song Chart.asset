@@ -12,19 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be1250d5174107446959fa12d21b2157, type: 3}
   m_Name: New Song Chart
   m_EditorClassIdentifier: Assembly-CSharp::SongChart
-  audioClip: {fileID: 8300000, guid: 769d884232d0d7d4fada5b15931abdfb, type: 3}
+  audioClip: {fileID: 8300000, guid: e438994c4729c814a96d5956f5102a07, type: 3}
   markers:
-  - time: 1
+  - time: 3.3025
     obstacle: {fileID: 4105241903175021605, guid: 3d8d462d4f5379a4bba0a9e1719c060c, type: 3}
-  - time: 2
+  - time: 3.6317
     obstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
-  - time: 3
+  - time: 3.946
     obstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
-  - time: 4
+  - time: 3.946
     obstacle: {fileID: 4105241903175021605, guid: 0537401ae4445f34d812f687dc3c41d7, type: 3}
-  - time: 5
+  - time: 4.2154
     obstacle: {fileID: 4105241903175021605, guid: 0537401ae4445f34d812f687dc3c41d7, type: 3}
-  - time: 6
+  - time: 5.2431
     obstacle: {fileID: 4105241903175021605, guid: 0537401ae4445f34d812f687dc3c41d7, type: 3}
-  - time: 7
+  - time: 6.2209
     obstacle: {fileID: 4105241903175021605, guid: 3d8d462d4f5379a4bba0a9e1719c060c, type: 3}

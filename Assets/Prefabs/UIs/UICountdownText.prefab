@@ -93,8 +93,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 160
-  m_fontSizeBase: 160
+  m_fontSize: 240
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -199,11 +199,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f99c443c779385a469c28ad31dbd227a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UICountdownDisplay
+  gameManager: {fileID: 0}
   songPlayer: {fileID: 0}
   rimText: {fileID: 264056601173584}
   countdownText: {fileID: 4243545839327162891}
   canvasGroup: {fileID: 818408128729035340}
   textTransform: {fileID: 3439213692499587272}
+  delayBeforeCountdown: 0.5
   messageInfos:
   - message: 4
     color: {r: 0.9622642, g: 0.5310609, b: 0.5310609, a: 1}
@@ -222,10 +224,7 @@ MonoBehaviour:
   - message: 1
     color: {r: 0.95203906, g: 0.9607843, b: 0.5294118, a: 1}
   - message: GO!
-    color: {r: 0.67782766, g: 0.9607843, b: 0.5294118, a: 1}
-  onCountdownCompleted:
-    m_PersistentCalls:
-      m_Calls: []
+    color: {r: 0.9529412, g: 0.9607843, b: 0.5294118, a: 1}
 --- !u!225 &818408128729035340
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -332,8 +331,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 160
-  m_fontSizeBase: 160
+  m_fontSize: 240
+  m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

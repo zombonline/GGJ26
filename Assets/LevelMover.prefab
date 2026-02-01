@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7067408644225615153}
   - component: {fileID: 613033508258462271}
   - component: {fileID: 1020118846623830550}
+  - component: {fileID: 2639912084808523270}
   m_Layer: 0
   m_Name: LevelMover
   m_TagString: Untagged
@@ -48,8 +49,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   songPlayer: {fileID: 1020118846623830550}
-  unitsPerSecond: 5
-  targetPos: {x: 0, y: 0}
+  unitsPerSecond: 7
+  targetPos: {x: -1.5, y: -3.5}
 --- !u!114 &7067408644225615153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,9 +63,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 191a8821a72404b4d98c84fc171d7692, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChartSpawner
-  unitsPerSecond: 5
   timeOffset: 0
   songPlayer: {fileID: 1020118846623830550}
+  levelScroller: {fileID: 7926211128847453102}
 --- !u!82 &613033508258462271
 AudioSource:
   m_ObjectHideFlags: 0
@@ -78,7 +79,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.545
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -179,4 +180,33 @@ MonoBehaviour:
   index: 0
   onSongFinished:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UISuccessScreen, Assembly-CSharp
+        m_MethodName: Show
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+--- !u!114 &2639912084808523270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2915939446141822242}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 573231295d8122b4b9ef664eae93a80a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MboyChartReader
+  mboyJson: {fileID: 1743372512206119097, guid: f048ec2cc1b0e1f4a878c95a4abf2d35, type: 3}
+  chart: {fileID: 11400000, guid: 886a3dc08c8e15b4eb3c7b24f4f5f771, type: 2}
+  jumpObstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
+  attackObstacle: {fileID: 4105241903175021605, guid: 3d8d462d4f5379a4bba0a9e1719c060c, type: 3}
+  heavyAttackObstacle: {fileID: 4105241903175021605, guid: 0537401ae4445f34d812f687dc3c41d7, type: 3}

@@ -18,15 +18,33 @@ public class PlayerHitChecker : MonoBehaviour
     [SerializeField] public UnityEvent onAttackSuccess, onJumpSuccess, onHeavyAttackSuccess;
     [SerializeField] public UnityEvent onAttackFail, onJumpFail, onHeavyAttackFail;
 
+    private float inputTime;
+    private BeatHitType inputType;
     private void OnEnable()
     {
-        GetComponent<Player>().onActionPerformed += CheckHit;
+        GetComponent<Player>().onActionPerformed += ExecuteBeatHit;
     }
 
     private void OnDisable()
     {
-        GetComponent<Player>().onActionPerformed -= CheckHit;
+        GetComponent<Player>().onActionPerformed -= ExecuteBeatHit;
     }
+
+    private void Update()
+    {
+        if (inputTime + 0.05f < Time.time)
+        {
+            CheckHit(inputType);
+            inputTime = float.PositiveInfinity;
+        }
+    }
+
+    public void ExecuteBeatHit(BeatHitType type)
+    {
+        inputTime = Time.time;
+        inputType = type;
+    }
+    
 
     public void CheckHit(BeatHitType type)
     {
@@ -42,6 +60,8 @@ public class PlayerHitChecker : MonoBehaviour
             for (int i = 1; i < hits.Length; i++)
             {
                 float d = Vector2.Distance(transform.position, hits[i].transform.position);
+                if(!hits[i].GetComponent<Obstacle>().canHit)
+                    continue;
                 if (d < closestDist)
                 {
                     closest = hits[i];
@@ -57,7 +77,7 @@ public class PlayerHitChecker : MonoBehaviour
                         onAttackFail?.Invoke();
                         break;
                     case BeatHitType.HeavyAttack:
-                        onAttackFail?.Invoke();
+                        onHeavyAttackFail?.Invoke();
                         break;
                     case BeatHitType.Jump:
                         onJumpFail?.Invoke();

@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: issy 2
   m_EditorClassIdentifier: Assembly-CSharp::SongChart
   audioClip: {fileID: 8300000, guid: 690e04e8965e72f46ba29990907411ba, type: 3}
+  bpm: 165
   markers: []

@@ -14,6 +14,7 @@ public class Obstacle : MonoBehaviour
     [SerializeField] public UnityEvent onObstacleHit, onObstacleFail;
     [SerializeField] private BoxCollider2D collider;
     private string name;
+    public bool canHit = true;
     
     private void Awake()
     {
@@ -37,7 +38,7 @@ public class Obstacle : MonoBehaviour
 
     public void ReactToPlayerInteraction(ObstacleSuccessState successState)
     {
-        collider.enabled = false;
+        canHit = false;
         if (successState == ObstacleSuccessState.Fail)
         {
             onObstacleFail?.Invoke();   

@@ -6,7 +6,7 @@ using UnityEngine;
 public class SongChart : ScriptableObject
 {
     public AudioClip audioClip;
-
+    public int bpm;
     public List<Marker> markers = new();
 
     [Serializable]

@@ -115,6 +115,16 @@ public class Mask : MonoBehaviour
         _failureTimer = float.PositiveInfinity;
     }
 
+    public void RemoveEnergy(float value)
+    {
+        if (_currentEnergy <= 0f)
+        {
+            gameManager.FailGame();
+            return;
+        }
+        _currentEnergy = Mathf.Max(_currentEnergy - value, 0f);
+    }
+
     public void CollectMask(MaskType maskType)
     {
         _currentMaskType = maskType;

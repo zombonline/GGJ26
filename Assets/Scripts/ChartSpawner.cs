@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 
@@ -13,7 +14,12 @@ public class ChartSpawner : MonoBehaviour
     {
         Rebuild();
     }
-    
+
+    private void Awake()
+    {
+        Rebuild();
+    }
+
     public void Rebuild()
     {
         ClearExistingMarkers();

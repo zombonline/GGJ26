@@ -925,7 +925,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Bramble Beats
+  m_text: Bramble Beat
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7b4f827e869aad148b90a7144610ac3a, type: 2}
   m_sharedMaterial: {fileID: -869373900192444734, guid: 7b4f827e869aad148b90a7144610ac3a, type: 2}
@@ -2248,7 +2248,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Bramble Beats
+  m_text: Bramble Beat
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fa8150d21b670394d92cdba00991978d, type: 2}
   m_sharedMaterial: {fileID: -869373900192444734, guid: fa8150d21b670394d92cdba00991978d, type: 2}

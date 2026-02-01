@@ -4,10 +4,9 @@ using UnityEngine;
 [ExecuteAlways]
 public class ChartSpawner : MonoBehaviour
 {
-    public float unitsPerSecond = 5f;
     public float timeOffset = 0f;
     [SerializeField] SongPlayer songPlayer;
-    
+    [SerializeField] LevelScroller levelScroller;
     
     [ContextMenu("Rebuild Markers")]
     public void RebuildButton()
@@ -30,7 +29,7 @@ public class ChartSpawner : MonoBehaviour
 
     void SpawnAtTime(GameObject spawnObject,float time, string name, string debugName)
     {
-        float x = time * unitsPerSecond;
+        float x = time * levelScroller.unitsPerSecond;
 
         var obj = Instantiate(spawnObject, transform);
         obj.GetComponentInChildren<TextMeshProUGUI>().text = debugName;

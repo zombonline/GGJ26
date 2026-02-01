@@ -14,7 +14,8 @@ public class UICountdownDisplay : MonoBehaviour
         public Color color;
     }
 
-    [Header("References")]
+    [Header("References")] 
+    [SerializeField] private GameManager gameManager;
     [SerializeField] private SongPlayer songPlayer;
 
     [Header("Components")] 
@@ -25,8 +26,7 @@ public class UICountdownDisplay : MonoBehaviour
     
     [Header("Settings")]
     [SerializeField] private List<MessageInfo> messageInfos;
-    [SerializeField] private UnityEvent onCountdownCompleted;
-
+    
     private Coroutine _textFadeCoroutine;
     
     private void Start()
@@ -50,7 +50,7 @@ public class UICountdownDisplay : MonoBehaviour
             yield return new WaitForSeconds(secondPerBeat);
         }
         ShowText(messageInfos[^1], secondPerBeat * 1.5f);
-        onCountdownCompleted?.Invoke();
+        gameManager.CompleteCountdown();
         yield return null;
     }
 

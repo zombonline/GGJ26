@@ -65,7 +65,6 @@ public class UISuccessScreen : MonoBehaviour
 
     private IEnumerator BlinkNextMaskSequence()
     {
-        Debug.Log("HERE1");
         while (true)
         {
             nextMaskBlinker.alpha = 0f;
@@ -75,14 +74,12 @@ public class UISuccessScreen : MonoBehaviour
             while (Time.time - startTime < duration)
             {
                 nextMaskBlinker.alpha = Mathf.Lerp(0f, 1f, (Time.time - startTime) / duration);
-                Debug.Log("HERE2 " + nextMaskBlinker.alpha);
                 yield return null;
             }
             startTime = Time.time;
             while (Time.time - startTime < duration)
             {
                 nextMaskBlinker.alpha = Mathf.Lerp(1f, 0f, (Time.time - startTime) / duration);
-                Debug.Log("HERE3 " + nextMaskBlinker.alpha);
                 yield return null;
             }
             yield return new WaitForSeconds(0.2f);

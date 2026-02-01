@@ -27,6 +27,16 @@ public class SpineAnimator : MonoBehaviour
 
     public void PlayAnimation(string animationName) => skeletonAnimation.AnimationState.SetAnimation(0, animationName, false);
     public void PlayAnimationLoop(string animationName) => skeletonAnimation.AnimationState.SetAnimation(0, animationName, true);
-    
+    public void PlayAnimationOneShot(string animationName) => skeletonAnimation.AnimationState.AddAnimation(0, animationName, false, 0);
+
+    public void PlayOneShot(string animationName)
+    {
+        var state = skeletonAnimation.AnimationState;
+
+        state.SetAnimation(1, animationName, false);
+        state.AddEmptyAnimation(1, 0, 0f);
+    }
+
+
     
 }

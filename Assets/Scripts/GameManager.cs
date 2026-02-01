@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
     public UnityEvent OnCountdownCompleted;
     public UnityEvent OnPause;
     public UnityEvent OnResume;
+    public UnityEvent OnLevelCompleted;
     public UnityEvent OnGameFailed;
 
     private bool _canPause;
@@ -16,7 +17,7 @@ public class GameManager : MonoBehaviour
         StartLevel();
     }
 
-    private void StartLevel()
+    public void StartLevel()
     {
         OnLevelStart.Invoke();
     }
@@ -68,5 +69,6 @@ public class GameManager : MonoBehaviour
     public void CompleteLevel()
     {
         _canPause = false;
+        OnLevelCompleted.Invoke();
     }
 }

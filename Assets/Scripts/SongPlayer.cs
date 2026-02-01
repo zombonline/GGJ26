@@ -24,14 +24,6 @@ public class SongPlayer : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (source.isPlaying)
-                source.Pause();
-            else
-                Play();
-        }
-
         if (Mathf.Approximately(source.time, charts[index].audioClip.length))
         {
             index = (index + 1) % charts.Length;

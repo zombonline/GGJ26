@@ -1,19 +1,18 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class UISuccessScreen : MonoBehaviour
 {
+    [Header("References")] 
+    [SerializeField] private GameManager gameManager;
+    
     [Header("Components")]
     [SerializeField] private Animator animator;
     [SerializeField] private Image previousMask;
     [SerializeField] private Image nextMask;
     [SerializeField] private CanvasGroup nextMaskBlinker;
     [SerializeField] private Button continueButton;
-
-    [Header("Settings")]
-    [SerializeField] private UnityEvent onContinue;
     
     private static readonly int Showing = Animator.StringToHash("Showing");
 
@@ -43,7 +42,8 @@ public class UISuccessScreen : MonoBehaviour
             StopCoroutine(_blinkMaskCoroutine);
             _blinkMaskCoroutine = null;
         }
-        onContinue.Invoke();
+
+        gameManager.StartLevel();
         _continueCoroutine = null;
     }
     

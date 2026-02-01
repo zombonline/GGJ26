@@ -38,8 +38,12 @@ public class SpineAnimator : MonoBehaviour
 
     public void PlayOneShotTrack0(string animationName)
     {
-        var state = skeletonAnimation.AnimationState; 
-        state.SetAnimation(1, animationName, false); 
+        var state = skeletonAnimation.AnimationState;
+
+        state.ClearTrack(1);
+
+        state.SetAnimation(1, animationName, false);
+
         state.AddEmptyAnimation(1, 0.4f, 0f);
     }
 

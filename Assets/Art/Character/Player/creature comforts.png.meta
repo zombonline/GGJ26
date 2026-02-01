@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 3ffac865bfe55b840a7f79b1ba95f0e1
+guid: d051761db63b359469d7be934c91485c
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -44,6 +44,24 @@ TextureImporter:
   - first:
       213: -6453036337602571343
     second: creature comforts_13
+  - first:
+      213: 8361971161898624918
+    second: creature comforts_14
+  - first:
+      213: -6849137801246721676
+    second: creature comforts_15
+  - first:
+      213: -382196510717108501
+    second: creature comforts_16
+  - first:
+      213: 3980846271202513959
+    second: creature comforts_17
+  - first:
+      213: -4268887148097524168
+    second: creature comforts_18
+  - first:
+      213: 1349549762165650200
+    second: creature comforts_19
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -121,7 +139,7 @@ TextureImporter:
     overridden: 0
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   - serializedVersion: 4
     buildTarget: Standalone
     maxTextureSize: 2048
@@ -134,7 +152,7 @@ TextureImporter:
     overridden: 0
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
   spriteSheet:
     serializedVersion: 2
     sprites: []

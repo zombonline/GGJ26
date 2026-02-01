@@ -1,55 +1,16 @@
 fileFormatVersion: 2
-guid: 3ffac865bfe55b840a7f79b1ba95f0e1
+guid: 7bfde90c452332748ad026891649abff
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3199656288122441188
-    second: creature comforts_0
-  - first:
-      213: -5167398402419982435
-    second: creature comforts_1
-  - first:
-      213: -6215754317640481193
-    second: creature comforts_2
-  - first:
-      213: 3830571426765332850
-    second: creature comforts_3
-  - first:
-      213: -7681778399636480396
-    second: creature comforts_4
-  - first:
-      213: -1483537954818031901
-    second: creature comforts_5
-  - first:
-      213: -860274118412296146
-    second: creature comforts_6
-  - first:
-      213: 6885630397844074950
-    second: creature comforts_7
-  - first:
-      213: 1992298230916188001
-    second: creature comforts_8
-  - first:
-      213: -4585589664913882954
-    second: creature comforts_9
-  - first:
-      213: 1201202264722189540
-    second: creature comforts_10
-  - first:
-      213: 2875180025316016321
-    second: creature comforts_11
-  - first:
-      213: 7776605718673192998
-    second: creature comforts_12
-  - first:
-      213: -6453036337602571343
-    second: creature comforts_13
+      213: -7023873813356635808
+    second: Right Leg_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
-    sRGBTexture: 0
+    sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
     borderMipMap: 0
@@ -79,13 +40,13 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
-    wrapW: 0
-  nPOTScale: 1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -94,9 +55,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -114,7 +75,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -127,7 +88,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -137,7 +98,29 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Right Leg_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 69
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06995b71bff268e90800000000000000
+      internalID: -7023873813356635808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -151,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Right Leg_0: -7023873813356635808
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

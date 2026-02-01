@@ -79,6 +79,7 @@ public class SceneLoader : MonoBehaviour
             overlayCanvasGroup.alpha = Mathf.Lerp(1f, 0f, (Time.unscaledTime - startTime) / fadeDuration);
             yield return null;
         }
+        overlayCanvasGroup.alpha = 0;
         
         overlayCanvasGroup.blocksRaycasts = false;
         _changeSceneCoroutine = null;

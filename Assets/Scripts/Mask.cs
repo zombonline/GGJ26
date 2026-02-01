@@ -22,10 +22,10 @@ public class Mask : MonoBehaviour
     [SerializeField] private GameManager gameManager;
     [SerializeField] private TextMeshProUGUI debugMaskInfoText;
 
-    
-    [Header("Settings (Energy)")]
-    [SerializeField] private List<MaskInfo> maskInfos;
 
+    [Header("Settings (Energy)")] 
+    [SerializeField] private float initialEnergy;
+    [SerializeField] private List<MaskInfo> maskInfos;
     
     private readonly Dictionary<MaskType, MaskInfo> _maskInfoLookup =  new Dictionary<MaskType, MaskInfo>();
 
@@ -39,7 +39,7 @@ public class Mask : MonoBehaviour
         ConstructMaskInfoLookup();
         
         _currentMaskType =  MaskType.Normal;
-        _currentEnergy = _maskInfoLookup[MaskType.Normal].totalEnergy;
+        _currentEnergy = Mathf.Max(initialEnergy, _maskInfoLookup[MaskType.Normal].totalEnergy);
     }
 
     private void Update()

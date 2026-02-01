@@ -23,6 +23,15 @@ public class SpineAnimator : MonoBehaviour
             skeletonAnimation.skeleton.SetSkin(randomSkin);
         }
     }
+
+    public void SetSkin()
+    {
+        var sp = FindAnyObjectByType<SongPlayer>();
+
+        var index = sp.index;
+        var name = "Mask " + (index+1);
+        skeletonAnimation.skeleton.SetSkin(name);
+    }
     
 
     public void PlayAnimation(string animationName) => skeletonAnimation.AnimationState.SetAnimation(0, animationName, false);

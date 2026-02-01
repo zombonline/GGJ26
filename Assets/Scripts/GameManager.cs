@@ -3,6 +3,8 @@ using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
+    [SerializeField] private SongPlayer songPlayer;
+    
     public UnityEvent OnGameStart;
     public UnityEvent OnLevelStart;
     public UnityEvent OnCountdownCompleted;
@@ -10,6 +12,7 @@ public class GameManager : MonoBehaviour
     public UnityEvent OnResume;
     public UnityEvent OnLevelCompleted;
     public UnityEvent OnGameFailed;
+    public UnityEvent OnGameCompleted;
 
     private bool _canPause;
     
@@ -72,6 +75,14 @@ public class GameManager : MonoBehaviour
     public void CompleteLevel()
     {
         _canPause = false;
-        OnLevelCompleted.Invoke();
+        if (songPlayer.SongIndex == 2)
+        {
+            OnGameCompleted.Invoke();
+        }
+        else
+        {
+            OnLevelCompleted.Invoke();
+        }
+
     }
 }

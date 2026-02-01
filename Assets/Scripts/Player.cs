@@ -34,6 +34,8 @@ public class Player : MonoBehaviour
     private int _combo = 0;
     public event Action ComboChanged; 
     
+    public int MaxCombo { get; private set; }
+    
     // ======== Unity Messages ========
     
     private void Update()
@@ -43,14 +45,12 @@ public class Player : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            Combo++;
-            ComboChanged?.Invoke();   
+            IncreaseCombo();
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            Combo = 0;
-            ComboChanged?.Invoke();   
+            ResetCombo();
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha3))
@@ -115,6 +115,8 @@ public class Player : MonoBehaviour
         
         gameManager.PauseGame();
     }
+    
+    // ======== Attacks ========
 
     private void PerformLightAttack()
     {
@@ -142,5 +144,18 @@ public class Player : MonoBehaviour
         Color c = debugInputText.color;
         c.a = Mathf.Max(0, c.a - 2f * Time.unscaledDeltaTime);
         debugInputText.color = c;
+    }
+    
+    // ======== Combo ========
+
+    public void IncreaseCombo()
+    {
+        Combo++;
+        MaxCombo = Mathf.Max(Combo, MaxCombo);
+    }
+
+    public void ResetCombo()
+    {
+        Combo = 0;
     }
 }

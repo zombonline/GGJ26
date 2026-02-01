@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be1250d5174107446959fa12d21b2157, type: 3}
   m_Name: lynn
   m_EditorClassIdentifier: Assembly-CSharp::SongChart
-  audioClip: {fileID: 8300000, guid: 1e39bf786e5af3c47be75f7580fdb8ea, type: 3}
+  audioClip: {fileID: 8300000, guid: 690e04e8965e72f46ba29990907411ba, type: 3}
   bpm: 165
   markers:
   - time: 2.1818182
@@ -30,12 +30,15 @@ MonoBehaviour:
   - time: 16.363636
     obstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
     debugName: Jump 11 400
-  - time: 18.545456
+  - time: 17.818182
     obstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
-    debugName: Jump 12 1200
-  - time: 20.727274
+    debugName: Jump 12 400
+  - time: 20
     obstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
-    debugName: Jump 14 400
+    debugName: Jump 13 1200
+  - time: 20.818182
+    obstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
+    debugName: Jump 14 500
   - time: 21.818182
     obstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
     debugName: Jump 15 0

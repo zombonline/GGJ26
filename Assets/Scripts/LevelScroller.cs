@@ -8,6 +8,12 @@ public class LevelScroller : MonoBehaviour
 
     void Update()
     {
+        if (!songPlayer.IsPlaying())
+        {
+            transform.position = targetPos;
+            return;
+        }
+
         float x = -songPlayer.TrackTime * unitsPerSecond;
         transform.position = new Vector3(targetPos.x + x, targetPos.y, 0f);
     }

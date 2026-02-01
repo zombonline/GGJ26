@@ -33,6 +33,7 @@ Transform:
   m_Children:
   - {fileID: 7008542391552460536}
   - {fileID: 100481095026714655}
+  - {fileID: 7547392555029862811}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7400931066440358848
@@ -50,12 +51,35 @@ MonoBehaviour:
   type: 1
   onObstacleHit:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3659756554277251838}
+        m_TargetAssemblyTypeName: SpineAnimator, Assembly-CSharp
+        m_MethodName: PlayAnimation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Death
+          m_BoolArgument: 0
+        m_CallState: 2
   onObstacleFail:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3659756554277251838}
+        m_TargetAssemblyTypeName: SpineAnimator, Assembly-CSharp
+        m_MethodName: PlayAnimation
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Attack
+          m_BoolArgument: 0
+        m_CallState: 2
   collider: {fileID: 0}
-  nameText: {fileID: 0}
 --- !u!61 &-4159572338911937614
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -100,7 +124,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.5, y: 10}
+  m_Size: {x: 1, y: 10}
   m_EdgeRadius: 0
 --- !u!1 &5097482487527004283
 GameObject:
@@ -356,7 +380,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &100481095026714655
 Transform:
   m_ObjectHideFlags: 0
@@ -430,3 +454,100 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1154331189387722362
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8418359825832070928}
+    m_Modifications:
+    - target: {fileID: 2508244597008864388, guid: 880243c499fee7c469e758772f304012, type: 3}
+      propertyPath: skinNames.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2508244597008864388, guid: 880243c499fee7c469e758772f304012, type: 3}
+      propertyPath: 'skinNames.Array.data[0]'
+      value: Jumpover/1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2508244597008864388, guid: 880243c499fee7c469e758772f304012, type: 3}
+      propertyPath: 'skinNames.Array.data[1]'
+      value: Jumpover/2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2508244597008864388, guid: 880243c499fee7c469e758772f304012, type: 3}
+      propertyPath: 'skinNames.Array.data[2]'
+      value: Jumpover/3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4048865442572945729, guid: 880243c499fee7c469e758772f304012, type: 3}
+      propertyPath: m_Name
+      value: Spine GameObject (creature comforts)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7441688511761734225, guid: 880243c499fee7c469e758772f304012, type: 3}
+      propertyPath: initialSkinName
+      value: Jumpover/1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8630385238261604704, guid: 880243c499fee7c469e758772f304012, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8698908923226253281, guid: 880243c499fee7c469e758772f304012, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8698908923226253281, guid: 880243c499fee7c469e758772f304012, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8698908923226253281, guid: 880243c499fee7c469e758772f304012, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8698908923226253281, guid: 880243c499fee7c469e758772f304012, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8698908923226253281, guid: 880243c499fee7c469e758772f304012, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8698908923226253281, guid: 880243c499fee7c469e758772f304012, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8698908923226253281, guid: 880243c499fee7c469e758772f304012, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8698908923226253281, guid: 880243c499fee7c469e758772f304012, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8698908923226253281, guid: 880243c499fee7c469e758772f304012, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8698908923226253281, guid: 880243c499fee7c469e758772f304012, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 880243c499fee7c469e758772f304012, type: 3}
+--- !u!114 &3659756554277251838 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2508244597008864388, guid: 880243c499fee7c469e758772f304012, type: 3}
+  m_PrefabInstance: {fileID: 1154331189387722362}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b08fa4c7995b6af4a9c899f7ee3d57b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+--- !u!4 &7547392555029862811 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8698908923226253281, guid: 880243c499fee7c469e758772f304012, type: 3}
+  m_PrefabInstance: {fileID: 1154331189387722362}
+  m_PrefabAsset: {fileID: 0}

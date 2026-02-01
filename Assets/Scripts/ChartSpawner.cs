@@ -7,10 +7,9 @@ public class ChartSpawner : MonoBehaviour
     public float unitsPerSecond = 5f;
     public float timeOffset = 0f;
     [SerializeField] SongPlayer songPlayer;
+    
+    
     [ContextMenu("Rebuild Markers")]
-    
-    
-    
     public void RebuildButton()
     {
         Rebuild();
@@ -22,7 +21,7 @@ public class ChartSpawner : MonoBehaviour
 
         // spawn markers from chart
 
-        var chart = songPlayer.chart;
+        var chart = songPlayer.currentChart;
         foreach (var marker in chart.markers)
         {
             SpawnAtTime(marker.obstacle ,marker.time + timeOffset, $"Marker_{marker.time:F2}s", marker.debugName);

@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 public enum BeatHitType
 {
@@ -10,10 +11,12 @@ public enum BeatHitType
 }
 public class PlayerHitChecker : MonoBehaviour
 {
-    public float hitDistance = 0.5f; // tweak this for leniency
+    [FormerlySerializedAs("hitDistance")] public float overlapDistance = 1f; // tweak this for leniency
+    public float perfectDistance = 0.5f;
     public LayerMask obstacleLayer;  // put obstacles on this layer
 
     [SerializeField] public UnityEvent onAttackSuccess, onJumpSuccess, onHeavyAttackSuccess;
+    [SerializeField] public UnityEvent onAttackFail, onJumpFail, onHeavyAttackFail;
 
     private void OnEnable()
     {
@@ -28,7 +31,7 @@ public class PlayerHitChecker : MonoBehaviour
     public void CheckHit(BeatHitType type)
     {
         // find all obstacles in a small radius around the player
-        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, hitDistance, obstacleLayer);
+        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, overlapDistance, obstacleLayer);
 
         if (hits.Length > 0)
         {
@@ -45,8 +48,24 @@ public class PlayerHitChecker : MonoBehaviour
                     closestDist = d;
                 }
             }
-            if(type != closest.GetComponent<Obstacle>().type)
-                closest.GetComponent<Obstacle>().ReactToPlayerInteraction(ObstacleSuccessState.Fail);
+            bool perfect = closestDist < perfectDistance;
+            if (type != closest.GetComponent<Obstacle>().type || !perfect)
+            {
+                switch (type)
+                {
+                    case BeatHitType.Attack:
+                        onAttackFail?.Invoke();
+                        break;
+                    case BeatHitType.HeavyAttack:
+                        onAttackFail?.Invoke();
+                        break;
+                    case BeatHitType.Jump:
+                        onJumpFail?.Invoke();
+                        break;
+                    default:
+                        throw new ArgumentOutOfRangeException(nameof(type), type, null);
+                }
+            }
             else
             {
                 closest.GetComponent<Obstacle>().ReactToPlayerInteraction(ObstacleSuccessState.Success);
@@ -76,6 +95,6 @@ public class PlayerHitChecker : MonoBehaviour
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(transform.position, hitDistance);
+        Gizmos.DrawWireSphere(transform.position, overlapDistance);
     }
 }

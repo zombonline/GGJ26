@@ -182,9 +182,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UISuccessScreen, Assembly-CSharp
-        m_MethodName: Show
-        m_Mode: 6
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: CompleteLevel
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -205,8 +205,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 573231295d8122b4b9ef664eae93a80a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MboyChartReader
-  mboyJson: {fileID: 1743372512206119097, guid: f048ec2cc1b0e1f4a878c95a4abf2d35, type: 3}
-  chart: {fileID: 11400000, guid: 886a3dc08c8e15b4eb3c7b24f4f5f771, type: 2}
+  mboyJson: {fileID: 1743372512206119097, guid: 868a90b653d9bc0419e767700d482e34, type: 3}
+  chart: {fileID: 11400000, guid: 2a7efee411734a948bcfcd4751ffe4dd, type: 2}
   jumpObstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
   attackObstacle: {fileID: 4105241903175021605, guid: 3d8d462d4f5379a4bba0a9e1719c060c, type: 3}
   heavyAttackObstacle: {fileID: 4105241903175021605, guid: 0537401ae4445f34d812f687dc3c41d7, type: 3}

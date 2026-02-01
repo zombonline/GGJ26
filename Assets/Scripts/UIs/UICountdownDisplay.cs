@@ -82,7 +82,6 @@ public class UICountdownDisplay : MonoBehaviour
         {
             canvasGroup.alpha = Sinerp(1f, 0f, (Time.time - startTime) / duration);
             textTransform.localScale = Vector3.one * Sinerp(1f, 0f, (Time.time - startTime) / duration);
-            Debug.Log(canvasGroup.alpha);
             yield return null;
         }
         canvasGroup.alpha = 0f;

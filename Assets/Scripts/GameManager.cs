@@ -3,6 +3,7 @@ using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
+    public UnityEvent OnGameStart;
     public UnityEvent OnLevelStart;
     public UnityEvent OnCountdownCompleted;
     public UnityEvent OnPause;
@@ -14,7 +15,7 @@ public class GameManager : MonoBehaviour
     
     private void Start()
     {
-        StartLevel();
+        OnGameStart.Invoke();
     }
 
     public void StartLevel()

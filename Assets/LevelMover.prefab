@@ -174,4 +174,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bb89031875b5c3448ceda5bb0230c49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  chart: {fileID: 11400000, guid: 20fbe30e83710fd4bbc2812774d3d107, type: 2}
+  charts:
+  - {fileID: 11400000, guid: 2a7efee411734a948bcfcd4751ffe4dd, type: 2}
+  index: 0
+  onSongFinished:
+    m_PersistentCalls:
+      m_Calls: []

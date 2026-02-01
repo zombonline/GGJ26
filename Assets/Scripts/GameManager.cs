@@ -19,8 +19,9 @@ public class GameManager : MonoBehaviour
         OnResume.Invoke();
     }
 
-    public void ResumeAndChangeToMenu()
+    public void ChangeToMenu()
     {
+        // Resuming is now done in scene loader
         SceneLoader.Instance.ChangeToMenuScene();
     }
 
@@ -30,8 +31,9 @@ public class GameManager : MonoBehaviour
         OnGameFailed.Invoke();
     }
 
-    public void ResumeAndRestart()
+    public void Restart()
     {
+        // Resuming is now done in scene loader
         SceneLoader.Instance.ChangeToLevelScene();
     }
 }

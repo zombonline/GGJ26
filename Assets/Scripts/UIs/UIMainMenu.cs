@@ -1,3 +1,6 @@
+using System;
+using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
@@ -6,6 +9,7 @@ public class UIMainMenu : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] private AudioMixer audioMixer;
+    [SerializeField] private Animator animator;
     
     [Header("Components (Main Page)")]
     [SerializeField] private GameObject mainPage;
@@ -21,26 +25,47 @@ public class UIMainMenu : MonoBehaviour
     [SerializeField] private GameObject creditsPage;
     [SerializeField] private Selectable creditsPageFirstSelectable;
     
+    private static readonly int PageAnimationKey = Animator.StringToHash("Page");
+
+    private Coroutine _changePageCoroutine;
+    
     // ======== General ========
 
-    private void HideAllPages()
+    private void ChangePage(int page, Action onChange)
     {
-        mainPage.SetActive(false);
-        settingsPage.SetActive(false);
-        creditsPage.SetActive(false);
+        if (_changePageCoroutine != null)
+            return;
+        
+        animator.SetInteger(PageAnimationKey, page);
+        _changePageCoroutine = StartCoroutine(ChangePageSequence(onChange));
+    }
+
+    private IEnumerator ChangePageSequence(Action onChange)
+    {
+        yield return new WaitForSecondsRealtime(0.25f);
+        onChange.Invoke();
+        yield return new WaitForSecondsRealtime(0.25f);
+        _changePageCoroutine = null;
     }
     
     // ======== Main Page ========
     
     public void ShowMainPage()
     {
-        HideAllPages();
-        mainPage.SetActive(true);
-        mainPageFirstSelectable.Select();
+        if (_changePageCoroutine != null)
+            return;
+        
+        ChangePage(0, () =>
+        {
+            mainPageFirstSelectable.Select();
+        });
     }
     
     public void StartGame()
     {
+        if (_changePageCoroutine != null)
+            return;
+        
         SceneLoader.Instance.ChangeToLevelScene();
     }
     
@@ -48,20 +73,28 @@ public class UIMainMenu : MonoBehaviour
 
     public void ShowSettingsPage()
     {
-        HideAllPages();
-        settingsPage.SetActive(true);
-        settingsPageFirstSelectable.Select();
+        if (_changePageCoroutine != null)
+            return;
+
+        ChangePage(1, () =>
+        {
+            settingsPageFirstSelectable.Select();
+        });
     }
     
     public void ChangeSoundVolume(float volume)
     {
+        if (_changePageCoroutine != null)
+            return;
+        
         audioMixer.SetFloat("SoundVolume", LinearToDecibel((int)volume / 4f));
-        if (audioMixer.GetFloat("SoundVolume", out float value))
-            Debug.Log(value);
     }
 
     public void ChangeMusicVolume(float volume)
     {
+        if (_changePageCoroutine != null)
+            return;
+        
         audioMixer.SetFloat("MusicVolume", LinearToDecibel(volume / 4f));
     }
     
@@ -74,8 +107,12 @@ public class UIMainMenu : MonoBehaviour
 
     public void ShowCreditsPage()
     {
-        HideAllPages();
-        creditsPage.SetActive(true);
-        creditsPageFirstSelectable.Select();
+        if (_changePageCoroutine != null)
+            return;
+        
+        ChangePage(2, () =>
+        {
+            creditsPageFirstSelectable.Select();
+        });
     }
 }

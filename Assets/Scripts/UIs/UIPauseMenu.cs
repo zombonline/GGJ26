@@ -38,12 +38,18 @@ public class UIPauseMenu : MonoBehaviour
         _resumeCoroutine = null;
     }
 
+
+    public void Retry()
+    {
+        gameManager.Restart();
+    }
+
     public void BackToTitle()
     {
         if (_resumeCoroutine != null)
             return;
         
-        gameManager.ResumeAndChangeToMenu();
+        gameManager.ChangeToMenu();
     }
 
     public void Show(bool show)

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: lynn
   m_EditorClassIdentifier: Assembly-CSharp::SongChart
   audioClip: {fileID: 8300000, guid: 1e39bf786e5af3c47be75f7580fdb8ea, type: 3}
+  bpm: 165
   markers:
   - time: 1.0909091
     obstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}

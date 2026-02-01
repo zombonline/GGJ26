@@ -1,0 +1,236 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be1250d5174107446959fa12d21b2157, type: 3}
+  m_Name: Level 3
+  m_EditorClassIdentifier: Assembly-CSharp::SongChart
+  audioClip: {fileID: 8300000, guid: 0676512d2f0aa5d4f98167c2a726e895, type: 3}
+  bpm: 190
+  markers:
+  - time: 1.1052631
+    obstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
+    debugName: Jump 0 1400
+  - time: 2.8421052
+    obstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
+    debugName: Jump 2 400
+  - time: 4.736842
+    obstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
+    debugName: Jump 3 1200
+  - time: 5.6842103
+    obstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
+    debugName: Jump 4 800
+  - time: 7.578947
+    obstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
+    debugName: Jump 6 0
+  - time: 9.473684
+    obstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
+    debugName: Jump 7 800
+  - time: 12.236841
+    obstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
+    debugName: Jump 9 1100
+  - time: 12.552631
+    obstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
+    debugName: Jump 9 1500
+  - time: 14.2105255
+    obstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
+    debugName: Jump 11 400
+  - time: 14.526316
+    obstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
+    debugName: Jump 11 800
+  - time: 18
+    obstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
+    debugName: Jump 14 400
+  - time: 18.315788
+    obstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
+    debugName: Jump 14 800
+  - time: 20.842104
+    obstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
+    debugName: Jump 16 800
+  - time: 23.052631
+    obstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
+    debugName: Jump 18 400
+  - time: 24.552631
+    obstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
+    debugName: Jump 19 700
+  - time: 26.526314
+    obstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
+    debugName: Jump 21 0
+  - time: 29.36842
+    obstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
+    debugName: Jump 23 400
+  - time: 30.315788
+    obstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
+    debugName: Jump 24 0
+  - time: 34.105263
+    obstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
+    debugName: Jump 27 0
+  - time: 35.05263
+    obstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
+    debugName: Jump 27 1200
+  - time: 36.86842
+    obstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
+    debugName: Jump 29 300
+  - time: 37.263157
+    obstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
+    debugName: Jump 29 800
+  - time: 41.05263
+    obstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
+    debugName: Jump 32 800
+  - time: 41.36842
+    obstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
+    debugName: Jump 32 1200
+  - time: 42.55263
+    obstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
+    debugName: Jump 33 1100
+  - time: 44.447365
+    obstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
+    debugName: Jump 35 300
+  - time: 45.473682
+    obstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
+    debugName: Jump 36 0
+  - time: 46.42105
+    obstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
+    debugName: Jump 36 1200
+  - time: 49.263157
+    obstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
+    debugName: Jump 39 0
+  - time: 50.210526
+    obstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
+    debugName: Jump 39 1200
+  - time: 51.473682
+    obstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
+    debugName: Jump 40 1200
+  - time: 52.42105
+    obstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
+    debugName: Jump 41 800
+  - time: 53.999996
+    obstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
+    debugName: Jump 42 1200
+  - time: 54.947365
+    obstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
+    debugName: Jump 43 800
+  - time: 59.684208
+    obstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
+    debugName: Jump 47 400
+  - time: 60.631577
+    obstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
+    debugName: Jump 48 0
+  - time: 66.31579
+    obstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
+    debugName: Jump 52 800
+  - time: 3.7894735
+    obstacle: {fileID: 4105241903175021605, guid: 3d8d462d4f5379a4bba0a9e1719c060c, type: 3}
+    debugName: Attack 3 0
+  - time: 6.6315784
+    obstacle: {fileID: 4105241903175021605, guid: 3d8d462d4f5379a4bba0a9e1719c060c, type: 3}
+    debugName: Attack 5 400
+  - time: 8.526316
+    obstacle: {fileID: 4105241903175021605, guid: 3d8d462d4f5379a4bba0a9e1719c060c, type: 3}
+    debugName: Attack 6 1200
+  - time: 10.421052
+    obstacle: {fileID: 4105241903175021605, guid: 3d8d462d4f5379a4bba0a9e1719c060c, type: 3}
+    debugName: Attack 8 400
+  - time: 10.736841
+    obstacle: {fileID: 4105241903175021605, guid: 3d8d462d4f5379a4bba0a9e1719c060c, type: 3}
+    debugName: Attack 8 800
+  - time: 13.263157
+    obstacle: {fileID: 4105241903175021605, guid: 3d8d462d4f5379a4bba0a9e1719c060c, type: 3}
+    debugName: Attack 10 800
+  - time: 16.105263
+    obstacle: {fileID: 4105241903175021605, guid: 3d8d462d4f5379a4bba0a9e1719c060c, type: 3}
+    debugName: Attack 12 1200
+  - time: 17.052631
+    obstacle: {fileID: 4105241903175021605, guid: 3d8d462d4f5379a4bba0a9e1719c060c, type: 3}
+    debugName: Attack 13 800
+  - time: 18.947369
+    obstacle: {fileID: 4105241903175021605, guid: 3d8d462d4f5379a4bba0a9e1719c060c, type: 3}
+    debugName: Attack 15 0
+  - time: 21.789473
+    obstacle: {fileID: 4105241903175021605, guid: 3d8d462d4f5379a4bba0a9e1719c060c, type: 3}
+    debugName: Attack 17 400
+  - time: 22.736841
+    obstacle: {fileID: 4105241903175021605, guid: 3d8d462d4f5379a4bba0a9e1719c060c, type: 3}
+    debugName: Attack 18 0
+  - time: 27.552631
+    obstacle: {fileID: 4105241903175021605, guid: 3d8d462d4f5379a4bba0a9e1719c060c, type: 3}
+    debugName: Attack 21 1300
+  - time: 28.421051
+    obstacle: {fileID: 4105241903175021605, guid: 3d8d462d4f5379a4bba0a9e1719c060c, type: 3}
+    debugName: Attack 22 800
+  - time: 31.263157
+    obstacle: {fileID: 4105241903175021605, guid: 3d8d462d4f5379a4bba0a9e1719c060c, type: 3}
+    debugName: Attack 24 1200
+  - time: 32.210526
+    obstacle: {fileID: 4105241903175021605, guid: 3d8d462d4f5379a4bba0a9e1719c060c, type: 3}
+    debugName: Attack 25 800
+  - time: 33.157894
+    obstacle: {fileID: 4105241903175021605, guid: 3d8d462d4f5379a4bba0a9e1719c060c, type: 3}
+    debugName: Attack 26 400
+  - time: 36
+    obstacle: {fileID: 4105241903175021605, guid: 3d8d462d4f5379a4bba0a9e1719c060c, type: 3}
+    debugName: Attack 28 800
+  - time: 38.763157
+    obstacle: {fileID: 4105241903175021605, guid: 3d8d462d4f5379a4bba0a9e1719c060c, type: 3}
+    debugName: Attack 30 1100
+  - time: 39.78947
+    obstacle: {fileID: 4105241903175021605, guid: 3d8d462d4f5379a4bba0a9e1719c060c, type: 3}
+    debugName: Attack 31 800
+  - time: 40.73684
+    obstacle: {fileID: 4105241903175021605, guid: 3d8d462d4f5379a4bba0a9e1719c060c, type: 3}
+    debugName: Attack 32 400
+  - time: 43.578945
+    obstacle: {fileID: 4105241903175021605, guid: 3d8d462d4f5379a4bba0a9e1719c060c, type: 3}
+    debugName: Attack 34 800
+  - time: 46.73684
+    obstacle: {fileID: 4105241903175021605, guid: 3d8d462d4f5379a4bba0a9e1719c060c, type: 3}
+    debugName: Attack 37 0
+  - time: 47.05263
+    obstacle: {fileID: 4105241903175021605, guid: 3d8d462d4f5379a4bba0a9e1719c060c, type: 3}
+    debugName: Attack 37 400
+  - time: 51.157894
+    obstacle: {fileID: 4105241903175021605, guid: 3d8d462d4f5379a4bba0a9e1719c060c, type: 3}
+    debugName: Attack 40 800
+  - time: 52.105263
+    obstacle: {fileID: 4105241903175021605, guid: 3d8d462d4f5379a4bba0a9e1719c060c, type: 3}
+    debugName: Attack 41 400
+  - time: 55.894733
+    obstacle: {fileID: 4105241903175021605, guid: 3d8d462d4f5379a4bba0a9e1719c060c, type: 3}
+    debugName: Attack 44 400
+  - time: 57.78947
+    obstacle: {fileID: 4105241903175021605, guid: 3d8d462d4f5379a4bba0a9e1719c060c, type: 3}
+    debugName: Attack 45 1200
+  - time: 58.73684
+    obstacle: {fileID: 4105241903175021605, guid: 3d8d462d4f5379a4bba0a9e1719c060c, type: 3}
+    debugName: Attack 46 800
+  - time: 68.210526
+    obstacle: {fileID: 4105241903175021605, guid: 3d8d462d4f5379a4bba0a9e1719c060c, type: 3}
+    debugName: Attack 54 0
+  - time: 11.368421
+    obstacle: {fileID: 4105241903175021605, guid: 0537401ae4445f34d812f687dc3c41d7, type: 3}
+    debugName: Heavy Attack 9 0
+  - time: 14.842105
+    obstacle: {fileID: 4105241903175021605, guid: 0537401ae4445f34d812f687dc3c41d7, type: 3}
+    debugName: Heavy Attack 11 1200
+  - time: 37.578945
+    obstacle: {fileID: 4105241903175021605, guid: 0537401ae4445f34d812f687dc3c41d7, type: 3}
+    debugName: Heavy Attack 29 1200
+  - time: 52.73684
+    obstacle: {fileID: 4105241903175021605, guid: 0537401ae4445f34d812f687dc3c41d7, type: 3}
+    debugName: Heavy Attack 41 1200
+  - time: 56.842102
+    obstacle: {fileID: 4105241903175021605, guid: 0537401ae4445f34d812f687dc3c41d7, type: 3}
+    debugName: Heavy Attack 45 0
+  - time: 62.526314
+    obstacle: {fileID: 4105241903175021605, guid: 0537401ae4445f34d812f687dc3c41d7, type: 3}
+    debugName: Heavy Attack 49 800
+  - time: 64.42105
+    obstacle: {fileID: 4105241903175021605, guid: 0537401ae4445f34d812f687dc3c41d7, type: 3}
+    debugName: Heavy Attack 51 0

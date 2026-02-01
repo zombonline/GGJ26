@@ -26,14 +26,11 @@ public class Mask : MonoBehaviour
     [Header("Settings (Energy)")]
     [SerializeField] private List<MaskInfo> maskInfos;
 
-    [Header("Settings (Failure)")]
-    [SerializeField] private float timeTillFailure;
     
     private readonly Dictionary<MaskType, MaskInfo> _maskInfoLookup =  new Dictionary<MaskType, MaskInfo>();
 
     private MaskType _currentMaskType;
     private float _currentEnergy;
-    private float _failureTimer;
     
     private MaskInfo _currentMaskInfo => _maskInfoLookup[_currentMaskType];
     
@@ -43,23 +40,12 @@ public class Mask : MonoBehaviour
         
         _currentMaskType =  MaskType.Normal;
         _currentEnergy = _maskInfoLookup[MaskType.Normal].totalEnergy;
-        _failureTimer = float.PositiveInfinity;
     }
 
     private void Update()
     {
         DecayEnergy();
-        DecreaseFailureTimer();
-        
-        // debug
-        if (float.IsPositiveInfinity(_failureTimer))
-        {
-            debugMaskInfoText.text = $"Mask energy: {_currentEnergy:F0}/{_currentMaskInfo.totalEnergy:F0}";
-        }
-        else
-        {
-            debugMaskInfoText.text = $"Time till failure: {(int)_failureTimer:D2}:{(int)(_failureTimer * 100 % 100):D2}";
-        }
+        debugMaskInfoText.text = $"Mask energy: {_currentEnergy:F0}/{_currentMaskInfo.totalEnergy:F0}";
     }
 
     private void ConstructMaskInfoLookup()
@@ -83,7 +69,6 @@ public class Mask : MonoBehaviour
         {
             if (_currentMaskType == MaskType.Normal)
             {
-                _failureTimer = timeTillFailure;
                 _currentEnergy = 0f;
             }
             else
@@ -94,25 +79,21 @@ public class Mask : MonoBehaviour
         }
     }
 
-    private void DecreaseFailureTimer()
-    {
-        if (Time.timeScale == 0f)
-            return;
-        
-        if (float.IsPositiveInfinity(_failureTimer))
-            return;
-        
-        _failureTimer -= Time.deltaTime;
-        if (_failureTimer <= 0f)
-        {
-            gameManager.FailGame();
-        }
-    }
+
 
     public void AddEnergy(float value)
     {
         _currentEnergy = Mathf.Min(_currentEnergy + value, _currentMaskInfo.totalEnergy);
-        _failureTimer = float.PositiveInfinity;
+    }
+
+    public void RemoveEnergy(float value)
+    {
+        if (_currentEnergy <= 0f)
+        {
+            gameManager.FailGame();
+            return;
+        }
+        _currentEnergy = Mathf.Max(_currentEnergy - value, 0f);
     }
 
     public void CollectMask(MaskType maskType)

@@ -1,19 +1,24 @@
 using System.Collections;
+using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class UISuccessScreen : MonoBehaviour
 {
+    [Header("References")] 
+    [SerializeField] private GameManager gameManager;
+    [SerializeField] private Player player;
+    [SerializeField] private SongPlayer songPlayer;
+    
     [Header("Components")]
     [SerializeField] private Animator animator;
     [SerializeField] private Image previousMask;
     [SerializeField] private Image nextMask;
     [SerializeField] private CanvasGroup nextMaskBlinker;
+    [SerializeField] private List<TextMeshProUGUI> comboTexts;
     [SerializeField] private Button continueButton;
-
-    [Header("Settings")]
-    [SerializeField] private UnityEvent onContinue;
+    [SerializeField] private List<Sprite> maskIcons;
     
     private static readonly int Showing = Animator.StringToHash("Showing");
 
@@ -43,7 +48,8 @@ public class UISuccessScreen : MonoBehaviour
             StopCoroutine(_blinkMaskCoroutine);
             _blinkMaskCoroutine = null;
         }
-        onContinue.Invoke();
+
+        gameManager.StartLevel();
         _continueCoroutine = null;
     }
     
@@ -53,6 +59,11 @@ public class UISuccessScreen : MonoBehaviour
         if (show)
         {
             continueButton.Select();
+
+            previousMask.sprite = maskIcons[Mathf.Max(songPlayer.SongIndex, maskIcons.Count - 1)];
+            previousMask.sprite = maskIcons[Mathf.Max(songPlayer.SongIndex + 1, maskIcons.Count - 1)];
+            
+            StartCoroutine(ShowComboAnimation());
 
             if (_blinkMaskCoroutine != null)
             {
@@ -65,7 +76,6 @@ public class UISuccessScreen : MonoBehaviour
 
     private IEnumerator BlinkNextMaskSequence()
     {
-        Debug.Log("HERE1");
         while (true)
         {
             nextMaskBlinker.alpha = 0f;
@@ -75,17 +85,35 @@ public class UISuccessScreen : MonoBehaviour
             while (Time.time - startTime < duration)
             {
                 nextMaskBlinker.alpha = Mathf.Lerp(0f, 1f, (Time.time - startTime) / duration);
-                Debug.Log("HERE2 " + nextMaskBlinker.alpha);
                 yield return null;
             }
             startTime = Time.time;
             while (Time.time - startTime < duration)
             {
                 nextMaskBlinker.alpha = Mathf.Lerp(1f, 0f, (Time.time - startTime) / duration);
-                Debug.Log("HERE3 " + nextMaskBlinker.alpha);
                 yield return null;
             }
             yield return new WaitForSeconds(0.2f);
+        }
+    }
+    
+    private IEnumerator ShowComboAnimation()
+    {
+        yield return new WaitForSecondsRealtime(0.25f);
+        float time = Time.unscaledTime;
+        float duration = 1f;
+        while (Time.unscaledTime - time < duration)
+        {
+            foreach (TextMeshProUGUI comboText in comboTexts)
+            {
+                comboText.text = $"{(int)Mathf.Lerp(0, player.MaxCombo, (Time.unscaledTime - time) / duration)}";
+            }
+            yield return null;
+        }
+
+        foreach (TextMeshProUGUI comboText in comboTexts)
+        {
+            comboText.text = $"{player.MaxCombo}";
         }
     }
 }

@@ -3,18 +3,48 @@ using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
+    public UnityEvent OnGameStart;
+    public UnityEvent OnLevelStart;
+    public UnityEvent OnCountdownCompleted;
     public UnityEvent OnPause;
     public UnityEvent OnResume;
+    public UnityEvent OnLevelCompleted;
     public UnityEvent OnGameFailed;
 
+    private bool _canPause;
+    
+    private void Start()
+    {
+        Time.timeScale = 0;
+        OnGameStart.Invoke();
+    }
+
+    public void StartLevel()
+    {
+        OnLevelStart.Invoke();
+    }
+
+    public void CompleteCountdown()
+    {
+        _canPause = true;
+        Time.timeScale = 1;
+        OnCountdownCompleted.Invoke();
+    }
+    
     public void PauseGame()
     {
+        if (!_canPause)
+            return;
+        
         Time.timeScale = 0;
         OnPause.Invoke();
     }
 
     public void ResumeGame()
     {
+        if (!_canPause)
+            return;
+        
         Time.timeScale = 1;
         OnResume.Invoke();
     }
@@ -27,6 +57,8 @@ public class GameManager : MonoBehaviour
 
     public void FailGame()
     {
+        _canPause = false;
+        
         Time.timeScale = 0;
         OnGameFailed.Invoke();
     }
@@ -35,5 +67,11 @@ public class GameManager : MonoBehaviour
     {
         // Resuming is now done in scene loader
         SceneLoader.Instance.ChangeToLevelScene();
+    }
+    
+    public void CompleteLevel()
+    {
+        _canPause = false;
+        OnLevelCompleted.Invoke();
     }
 }

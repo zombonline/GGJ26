@@ -13,6 +13,8 @@ public class SongPlayer : MonoBehaviour
 
     public float TrackTime => source.time;
     public float SongLength => charts[index].audioClip.length;
+
+    public int SongIndex => index;
     
     public UnityEvent onSongFinished;
 
@@ -24,14 +26,6 @@ public class SongPlayer : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (source.isPlaying)
-                source.Pause();
-            else
-                Play();
-        }
-
         if (Mathf.Approximately(source.time, charts[index].audioClip.length))
         {
             index = (index + 1) % charts.Length;

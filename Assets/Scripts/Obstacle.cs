@@ -12,32 +12,19 @@ public class Obstacle : MonoBehaviour
 {
     [SerializeField] public BeatHitType type;
     [SerializeField] public UnityEvent onObstacleHit, onObstacleFail;
-    [SerializeField] private BoxCollider2D collider;
     private string name;
     public bool canHit = true;
-    
-    private void Awake()
-    {
-        collider = GetComponent<BoxCollider2D>();
-        
-    }
-
-    private void OnEnable()
-    {
-        collider.enabled = true;
-    }
-
-
-
 
     private void Update()
     {
-        if(transform.position.x < -10) 
+        if(transform.position.x < -20) 
             gameObject.SetActive(false);
     }
 
     public void ReactToPlayerInteraction(ObstacleSuccessState successState)
     {
+        if(!canHit)
+            return;
         canHit = false;
         if (successState == ObstacleSuccessState.Fail)
         {

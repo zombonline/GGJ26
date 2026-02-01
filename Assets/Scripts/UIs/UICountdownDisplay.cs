@@ -41,13 +41,13 @@ public class UICountdownDisplay : MonoBehaviour
     
     private IEnumerator CountdownSequence()
     {
-        yield return new WaitForSeconds(delayBeforeCountdown);
+        yield return new WaitForSecondsRealtime(delayBeforeCountdown);
 
         float secondPerBeat = 60f / songPlayer.currentChart.bpm;
         for (int i = 0; i < messageInfos.Count - 1; i++)
         {
             ShowText(messageInfos[i], secondPerBeat * 2f);
-            yield return new WaitForSeconds(secondPerBeat);
+            yield return new WaitForSecondsRealtime(secondPerBeat);
         }
         ShowText(messageInfos[^1], 1.5f);
         gameManager.CompleteCountdown();
@@ -74,14 +74,14 @@ public class UICountdownDisplay : MonoBehaviour
         canvasGroup.alpha = 1f;
         textTransform.localScale = Vector3.one;
         
-        yield return new WaitForSeconds(fullDuration * 0.25f);
+        yield return new WaitForSecondsRealtime(fullDuration * 0.25f);
         
-        float startTime = Time.time;
+        float startTime = Time.unscaledTime;
         float duration = fullDuration * 0.75f;
-        while (Time.time - startTime < duration)
+        while (Time.unscaledTime - startTime < duration)
         {
-            canvasGroup.alpha = Sinerp(1f, 0f, (Time.time - startTime) / duration);
-            textTransform.localScale = Vector3.one * Sinerp(1f, 0f, (Time.time - startTime) / duration);
+            canvasGroup.alpha = Sinerp(1f, 0f, (Time.unscaledTime - startTime) / duration);
+            textTransform.localScale = Vector3.one * Sinerp(1f, 0f, (Time.unscaledTime - startTime) / duration);
             yield return null;
         }
         canvasGroup.alpha = 0f;

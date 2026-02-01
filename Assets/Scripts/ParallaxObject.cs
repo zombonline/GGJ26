@@ -10,7 +10,7 @@ public class ParallaxObject : MonoBehaviour
     private Transform[] _recurrentCopies = new Transform[3];
     private Vector3[] _recurrentCopyCentres = new Vector3[3];
     private Vector3[] _recurrentCopyOffsets =  new Vector3[3];
-    private float _rightExtend;
+    private float _extend;
     
     private void OnDrawGizmosSelected()
     {
@@ -33,7 +33,7 @@ public class ParallaxObject : MonoBehaviour
     {
         Vector2 pivotedOffset = (spriteRenderer.sprite.pivot - spriteRenderer.sprite.textureRect.size / 2f) / spriteRenderer.sprite.pixelsPerUnit * spriteRenderer.transform.lossyScale.x * -1f;
         Vector3 halfSize = (spriteRenderer.sprite.textureRect.size / spriteRenderer.sprite.pixelsPerUnit * spriteRenderer.transform.lossyScale.x + randomRanges) / 2f;
-        _rightExtend = halfSize.x + pivotedOffset.x;
+        _extend = halfSize.x + pivotedOffset.x;
         
         _recurrentCopies[0] = CreateRecurrentCopy(transform.position);
         _recurrentCopies[1] = CreateRecurrentCopy(transform.position - Vector3.right * layerLength);
@@ -66,7 +66,12 @@ public class ParallaxObject : MonoBehaviour
         for (int i = 0; i < _recurrentCopies.Length; i++)
         {
             _recurrentCopyCentres[i] += Vector3.left * delta;
-            if (_recurrentCopyCentres[i].x + _rightExtend < mainCamera.orthographicSize * Screen.width / Screen.height * -1f)
+            while (_recurrentCopyCentres[i].x + _extend > mainCamera.orthographicSize * Screen.width / Screen.height * -1f + layerLength * 3)
+            {
+                _recurrentCopyCentres[i] -= Vector3.right * layerLength * 3f;
+                _recurrentCopyOffsets[i] = new Vector3(Random.Range(-0.5f, 0.5f) * randomRanges.x, Random.Range(-0.5f, 0.5f) * randomRanges.y, 0f);
+            }
+            while (_recurrentCopyCentres[i].x + _extend < mainCamera.orthographicSize * Screen.width / Screen.height * -1f)
             {
                 _recurrentCopyCentres[i] += Vector3.right * layerLength * 3f;
                 _recurrentCopyOffsets[i] = new Vector3(Random.Range(-0.5f, 0.5f) * randomRanges.x, Random.Range(-0.5f, 0.5f) * randomRanges.y, 0f);

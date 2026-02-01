@@ -32,7 +32,7 @@ public class Obstacle : MonoBehaviour
 
     private void Update()
     {
-        if(transform.position.x < -10) 
+        if(transform.position.x < -20) 
             gameObject.SetActive(false);
     }
 

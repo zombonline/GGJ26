@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     
     private void Start()
     {
+        Time.timeScale = 0;
         OnGameStart.Invoke();
     }
 
@@ -26,6 +27,7 @@ public class GameManager : MonoBehaviour
     public void CompleteCountdown()
     {
         _canPause = true;
+        Time.timeScale = 1;
         OnCountdownCompleted.Invoke();
     }
     

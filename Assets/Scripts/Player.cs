@@ -165,5 +165,6 @@ public class Player : MonoBehaviour
     public void ResetCombo()
     {
         Combo = 0;
+        OnMissed?.Invoke();
     }
 }

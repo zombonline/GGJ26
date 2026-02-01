@@ -1,4 +1,6 @@
 using System.Collections;
+using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -6,13 +8,17 @@ public class UISuccessScreen : MonoBehaviour
 {
     [Header("References")] 
     [SerializeField] private GameManager gameManager;
+    [SerializeField] private Player player;
+    [SerializeField] private SongPlayer songPlayer;
     
     [Header("Components")]
     [SerializeField] private Animator animator;
     [SerializeField] private Image previousMask;
     [SerializeField] private Image nextMask;
     [SerializeField] private CanvasGroup nextMaskBlinker;
+    [SerializeField] private List<TextMeshProUGUI> comboTexts;
     [SerializeField] private Button continueButton;
+    [SerializeField] private List<Sprite> maskIcons;
     
     private static readonly int Showing = Animator.StringToHash("Showing");
 
@@ -54,6 +60,11 @@ public class UISuccessScreen : MonoBehaviour
         {
             continueButton.Select();
 
+            previousMask.sprite = maskIcons[Mathf.Max(songPlayer.SongIndex, maskIcons.Count - 1)];
+            previousMask.sprite = maskIcons[Mathf.Max(songPlayer.SongIndex + 1, maskIcons.Count - 1)];
+            
+            StartCoroutine(ShowComboAnimation());
+
             if (_blinkMaskCoroutine != null)
             {
                 StopCoroutine(_blinkMaskCoroutine);
@@ -83,6 +94,26 @@ public class UISuccessScreen : MonoBehaviour
                 yield return null;
             }
             yield return new WaitForSeconds(0.2f);
+        }
+    }
+    
+    private IEnumerator ShowComboAnimation()
+    {
+        yield return new WaitForSecondsRealtime(0.25f);
+        float time = Time.unscaledTime;
+        float duration = 1f;
+        while (Time.unscaledTime - time < duration)
+        {
+            foreach (TextMeshProUGUI comboText in comboTexts)
+            {
+                comboText.text = $"{(int)Mathf.Lerp(0, player.MaxCombo, (Time.unscaledTime - time) / duration)}";
+            }
+            yield return null;
+        }
+
+        foreach (TextMeshProUGUI comboText in comboTexts)
+        {
+            comboText.text = $"{player.MaxCombo}";
         }
     }
 }

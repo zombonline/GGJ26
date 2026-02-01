@@ -13,6 +13,8 @@ public class SongPlayer : MonoBehaviour
 
     public float TrackTime => source.time;
     public float SongLength => charts[index].audioClip.length;
+
+    public int SongIndex => index;
     
     public UnityEvent onSongFinished;
 

@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,7 +12,7 @@ public class UIFailureScreen : MonoBehaviour
     
     [Header("Components")]
     [SerializeField] private Animator animator;
-    [SerializeField] private TextMeshProUGUI comboText;
+    [SerializeField] private List<TextMeshProUGUI> comboTexts;
     [SerializeField] private Button retryButton;
     
     private static readonly int Showing = Animator.StringToHash("Showing");
@@ -23,12 +24,12 @@ public class UIFailureScreen : MonoBehaviour
     
     public void Retry()
     {
-        gameManager.ResumeAndRestart();
+        gameManager.Restart();
     }
     
     public void BackToTitle()
     {
-        gameManager.ResumeAndChangeToMenu();
+        gameManager.ChangeToMenu();
     }
     
     public void Show(bool show)
@@ -48,9 +49,16 @@ public class UIFailureScreen : MonoBehaviour
         float duration = 1f;
         while (Time.unscaledTime - time < duration)
         {
-            comboText.text = $"{(int)Mathf.Lerp(0, player.MaxCombo, (Time.unscaledTime - time) / duration)}";
+            foreach (TextMeshProUGUI comboText in comboTexts)
+            {
+                comboText.text = $"{(int)Mathf.Lerp(0, player.MaxCombo, (Time.unscaledTime - time) / duration)}";
+            }
             yield return null;
         }
-        comboText.text = $"{player.MaxCombo}";
+
+        foreach (TextMeshProUGUI comboText in comboTexts)
+        {
+            comboText.text = $"{player.MaxCombo}";
+        }
     }
 }

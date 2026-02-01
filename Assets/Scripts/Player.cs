@@ -35,6 +35,8 @@ public class Player : MonoBehaviour
     public event Action ComboChanged; 
     
     public int MaxCombo { get; private set; }
+
+    public event Action OnMissed;
     
     // ======== Unity Messages ========
     
@@ -52,13 +54,18 @@ public class Player : MonoBehaviour
         {
             ResetCombo();
         }
-
+        
         if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            OnMissed?.Invoke();
+        }
+        
+        if (Input.GetKeyDown(KeyCode.Alpha4))
         {
             mask.AddEnergy(50f);
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha4))
+        if (Input.GetKeyDown(KeyCode.Alpha5))
         {
             mask.CollectMask(Mask.MaskType.Special);
         }

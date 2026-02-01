@@ -12,14 +12,19 @@ public class UIComboDisplay : MonoBehaviour
     [SerializeField] private TextMeshProUGUI comboText;
     [SerializeField] private CanvasGroup canvasGroup;
 
-    [Header("Settings")] 
+    [Header("Settings (General)")] 
     [SerializeField] private float decayDuration;
     [SerializeField] private AnimationCurve decayCurve;
     [SerializeField] private float scaleDuration;
     [SerializeField] private AnimationCurve scaleCurve;
     [SerializeField] private float randomAngleFrom;
     [SerializeField] private float randomAngleTo;
+    
+    [Header("Settings (Per Type)")]
     [SerializeField] private List<Color> textColors;
+    [SerializeField] private float fontSize;
+    [SerializeField] private List<Color> missColors;
+    [SerializeField] private float missFontSize;
 
     private int _lastValue = 0;
     private float _lastChangeTime = float.NegativeInfinity;
@@ -30,6 +35,8 @@ public class UIComboDisplay : MonoBehaviour
         
         player.ComboChanged += OnComboChanged;
         OnComboChanged();
+        
+        player.OnMissed += OnMissed;
     }
 
     private void OnDestroy()
@@ -37,6 +44,7 @@ public class UIComboDisplay : MonoBehaviour
         if (player != null)
         {
             player.ComboChanged -= OnComboChanged;
+            player.OnMissed -= OnMissed;
         }
     }
 
@@ -52,6 +60,8 @@ public class UIComboDisplay : MonoBehaviour
             rimText.transform.localEulerAngles = new Vector3(0f, 0f, Random.Range(randomAngleFrom, randomAngleTo));
             comboText.text = player.Combo.ToString();
             rimText.text = player.Combo.ToString();
+            comboText.fontSize = fontSize;
+            rimText.fontSize = fontSize;
             Color selectedColor = textColors[Random.Range(0, textColors.Count)];
             comboText.color = selectedColor;
             rimText.color = selectedColor * 0.25f + Color.black * 0.75f;
@@ -60,6 +70,19 @@ public class UIComboDisplay : MonoBehaviour
         _lastValue = player.Combo;
     }
 
+    private void OnMissed()
+    {
+        rimText.transform.localEulerAngles = new Vector3(0f, 0f, Random.Range(randomAngleFrom, randomAngleTo));
+        comboText.text = "miss";
+        rimText.text = "miss";
+        comboText.fontSize = missFontSize;
+        rimText.fontSize = missFontSize;
+        Color selectedColor = missColors[Random.Range(0, missColors.Count)];
+        comboText.color = selectedColor;
+        rimText.color = selectedColor * 0.25f + Color.black * 0.75f;
+        _lastChangeTime = Time.time;
+    }
+    
     private void ResolveAppearance()
     {
         if (Time.time - _lastChangeTime < Mathf.Max(decayDuration, scaleDuration))

@@ -103,7 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: spine-unity::Spine.Unity.SkeletonAnimation
-  skeletonDataAsset: {fileID: 11400000, guid: f7224e94f7ef57b41a217f7c4d7570b8, type: 2}
+  skeletonDataAsset: {fileID: 11400000, guid: 58ee8b69c99011748b4d451b296dec6f, type: 2}
   initialSkinName: Light Attack/1
   fixPrefabOverrideViaMeshFilter: 2
   initialFlipX: 0

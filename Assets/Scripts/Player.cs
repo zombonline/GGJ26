@@ -68,6 +68,7 @@ public class Player : MonoBehaviour
     
     private void OnJump(InputValue value)
     {
+        
         _jumpInput = value.isPressed;
         _lastInputTime = Time.unscaledTime;
         

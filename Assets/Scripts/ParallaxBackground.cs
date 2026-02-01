@@ -21,10 +21,12 @@ public class ParallaxBackground : MonoBehaviour
     private void Update()
     {
         float moveDelta = (levelMoverTransform.transform.position.x - _lastLevelMoverPosition.x) * -1f;
+        _lastLevelMoverPosition = levelMoverTransform.transform.position;
+        if(Mathf.Abs(moveDelta) > 100 )
+            return;
         foreach (ParallaxBackgroundLayer layer in layers)
         {
             layer.Move(mainCamera, moveDelta);
         }
-        _lastLevelMoverPosition = levelMoverTransform.transform.position;
     }
 }

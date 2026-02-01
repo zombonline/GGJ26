@@ -1,0 +1,39 @@
+creature comforts.png
+	size: 1042, 1657
+	filter: Linear, Linear
+Bang
+	bounds: 2, 325, 452, 465
+	rotate: 90
+H_attack_1
+	bounds: 532, 765, 333, 508
+	rotate: 90
+H_attack_2
+	bounds: 2, 779, 342, 528
+	rotate: 90
+H_attack_3
+	bounds: 2, 1123, 532, 714
+	rotate: 90
+Jumpover_1
+	bounds: 718, 1300, 355, 317
+	rotate: 90
+Jumpover_2
+	bounds: 469, 24, 375, 343
+Jumpover_3
+	bounds: 525, 369, 394, 420
+	rotate: 90
+L_attack_1
+	bounds: 718, 1100, 198, 288
+	rotate: 90
+L_attack_2
+	bounds: 2, 119, 204, 365
+	rotate: 90
+L_attack_3
+	bounds: 846, 2, 171, 365
+Musical Note 1
+	bounds: 469, 658, 54, 119
+Musical Note 2
+	bounds: 2, 7, 110, 126
+	rotate: 90
+Small Shadow
+	bounds: 469, 459, 197, 39
+	rotate: 90

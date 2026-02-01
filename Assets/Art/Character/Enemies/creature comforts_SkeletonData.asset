@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: creature comforts_SkeletonData
   m_EditorClassIdentifier: spine-unity::Spine.Unity.SkeletonDataAsset
   atlasAssets:
-  - {fileID: 11400000, guid: 1ab117fcf4a280f488d79dfafb7194b0, type: 2}
-  scale: 0.005208333
-  skeletonJSON: {fileID: 4900000, guid: 85b9da5fbeca28f449b0a30a35f8e3d3, type: 3}
+  - {fileID: 11400000, guid: 32eaa3f43f54dd74abdf5591679fd9e8, type: 2}
+  scale: 0.001953125
+  skeletonJSON: {fileID: 4900000, guid: 0a4695858db780342a085d75618b417b, type: 3}
   isUpgradingBlendModeMaterials: 0
   blendModeMaterials:
     requiresBlendModeMaterials: 0

@@ -18,6 +18,8 @@ public class SongPlayer : MonoBehaviour
     
     public UnityEvent onSongFinished;
 
+    public UnityEvent onGameFinished;
+
     void Awake()
     {
         source = GetComponent<AudioSource>();
@@ -28,9 +30,16 @@ public class SongPlayer : MonoBehaviour
     {
         if (Mathf.Approximately(source.time, charts[index].audioClip.length))
         {
-            index = (index + 1) % charts.Length;
-            source.clip = currentChart.audioClip;
-            onSongFinished?.Invoke();
+            index++;
+            if (index < charts.Length)
+            {
+                source.clip = currentChart.audioClip;
+                onSongFinished?.Invoke();
+            }
+            else
+            {
+                onGameFinished?.Invoke();
+            }
         }
     }
 

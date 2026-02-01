@@ -75,14 +75,12 @@ public class GameManager : MonoBehaviour
     public void CompleteLevel()
     {
         _canPause = false;
-        if (songPlayer.SongIndex == 2)
-        {
-            OnGameCompleted.Invoke();
-        }
-        else
-        {
-            OnLevelCompleted.Invoke();
-        }
+        OnLevelCompleted.Invoke();
+    }
 
+    public void CompleteGame()
+    {
+        _canPause = false;
+        OnGameCompleted.Invoke();
     }
 }

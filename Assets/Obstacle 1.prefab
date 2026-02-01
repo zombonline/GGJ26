@@ -68,6 +68,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   collider: {fileID: 0}
+  canHit: 1
 --- !u!61 &-4159572338911937614
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -368,7 +369,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &100481095026714655
 Transform:
   m_ObjectHideFlags: 0
@@ -378,7 +379,7 @@ Transform:
   m_GameObject: {fileID: 8910771114569848712}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -430,8 +431,8 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  m_SortingOrder: 2
+  m_Sprite: {fileID: -3356589912108642791, guid: 2cb0afe2617f9854b86f9c6017c1529f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -452,7 +453,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2508244597008864388, guid: 880243c499fee7c469e758772f304012, type: 3}
       propertyPath: skinNames.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2508244597008864388, guid: 880243c499fee7c469e758772f304012, type: 3}
       propertyPath: 'skinNames.Array.data[0]'
@@ -472,7 +473,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7441688511761734225, guid: 880243c499fee7c469e758772f304012, type: 3}
       propertyPath: initialSkinName
-      value: Jumpover/1
+      value: Jumpover/2
       objectReference: {fileID: 0}
     - target: {fileID: 8630385238261604704, guid: 880243c499fee7c469e758772f304012, type: 3}
       propertyPath: m_Mesh
@@ -480,7 +481,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8698908923226253281, guid: 880243c499fee7c469e758772f304012, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 8698908923226253281, guid: 880243c499fee7c469e758772f304012, type: 3}
       propertyPath: m_LocalPosition.y

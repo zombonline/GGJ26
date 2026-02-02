@@ -59,9 +59,9 @@ public class UISuccessScreen : MonoBehaviour
         if (show)
         {
             continueButton.Select();
-
+            
             previousMask.sprite = maskIcons[Mathf.Clamp(songPlayer.SongIndex - 1, 0, maskIcons.Count - 1)];
-            nextMask.sprite = maskIcons[Mathf.Min(songPlayer.SongIndex, 0, maskIcons.Count - 1)];
+            nextMask.sprite = maskIcons[Mathf.Clamp(songPlayer.SongIndex, 0, maskIcons.Count - 1)];
             
             StartCoroutine(ShowComboAnimation());
 

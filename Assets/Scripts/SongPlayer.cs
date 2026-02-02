@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -7,6 +8,8 @@ public class SongPlayer : MonoBehaviour
 {
     public SongChart[] charts;
     public int index = 0;
+    public float songEndDetectionMargin;
+    
     public SongChart currentChart => charts[index];
 
     private AudioSource source;
@@ -28,17 +31,22 @@ public class SongPlayer : MonoBehaviour
 
     private void Update()
     {
-        if (index < charts.Length && Mathf.Approximately(source.time, charts[index].audioClip.length))
+        if (index < charts.Length)
         {
-            index++;
-            if (index < charts.Length)
+            if (source.isPlaying && charts[index].audioClip.length - source.time <= songEndDetectionMargin)
             {
-                source.clip = currentChart.audioClip;
-                onSongFinished?.Invoke();
-            }
-            else
-            {
-                onGameFinished?.Invoke();
+                index++;
+                if (index < charts.Length)
+                {
+                    source.Pause();
+                    source.clip = currentChart.audioClip;
+                    onSongFinished?.Invoke();
+                }
+                else
+                {
+                    source.Pause();
+                    onGameFinished?.Invoke();
+                }
             }
         }
     }

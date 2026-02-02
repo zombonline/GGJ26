@@ -28,7 +28,7 @@ public class SongPlayer : MonoBehaviour
 
     private void Update()
     {
-        if (Mathf.Approximately(source.time, charts[index].audioClip.length))
+        if (index < charts.Length && Mathf.Approximately(source.time, charts[index].audioClip.length))
         {
             index++;
             if (index < charts.Length)

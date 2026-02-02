@@ -29,16 +29,15 @@ public class ChartSpawner : MonoBehaviour
         var chart = songPlayer.currentChart;
         foreach (var marker in chart.markers)
         {
-            SpawnAtTime(marker.obstacle ,marker.time + timeOffset, $"Marker_{marker.time:F2}s", marker.debugName);
+            SpawnAtTime(marker.obstacle ,marker.time + timeOffset, $"Marker_{marker.time:F2}s");
         }
     }
 
-    void SpawnAtTime(GameObject spawnObject,float time, string name, string debugName)
+    void SpawnAtTime(GameObject spawnObject,float time, string name)
     {
         float x = time * levelScroller.unitsPerSecond;
 
         var obj = Instantiate(spawnObject, transform);
-        obj.GetComponentInChildren<TextMeshProUGUI>().text = debugName;
         obj.name = name;
         obj.transform.localPosition = new Vector3(x, 0f, 0f);
     }

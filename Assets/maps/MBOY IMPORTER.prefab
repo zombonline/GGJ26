@@ -44,8 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 573231295d8122b4b9ef664eae93a80a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MboyChartReader
-  mboyJson: {fileID: 0}
-  chart: {fileID: 0}
+  mboyJson: {fileID: 1743372512206119097, guid: 217e1d79580feba409d6690f4baead12, type: 3}
+  chart: {fileID: 11400000, guid: a0826cbf8438fcf4fbb1487781c3670a, type: 2}
   jumpObstacle: {fileID: 4105241903175021605, guid: 32ef169304a3f2c44aae47a32a76487d, type: 3}
   attackObstacle: {fileID: 4105241903175021605, guid: 3d8d462d4f5379a4bba0a9e1719c060c, type: 3}
   heavyAttackObstacle: {fileID: 4105241903175021605, guid: 0537401ae4445f34d812f687dc3c41d7, type: 3}
